@@ -26,7 +26,7 @@ const path = require('path');
 const SITE_URL = 'https://www.sicherheit-karriere.de';
 const COMPANY_NAME = 'ZSBV – Zentralstelle für Sichere Bildungsvermittlung';
 const JOBS_DIR = path.join(__dirname, 'jobs');
-const TEMPLATE_PATH = path.join(__dirname, 'job-template.html');
+const TEMPLATE_PATH = path.join(__dirname, 'job-template-premium.html');
 
 // ============================================================
 // IMPORT DATA (SEO Optimised & Hyper-Local)
@@ -284,7 +284,8 @@ function generateAllJobs(template) {
         .replace(/{{LOCATION}}/g, esc(city.name))
         .replace(/{{DATE_POSTED}}/g, esc(today))
         .replace(/{{EMPLOYMENT}}/g, esc('Vollzeit'))
-        .replace(/{{SALARY}}/g, esc(salary))
+        .replace(/{{SALARY_MIN}}/g, esc(tmpl.salaryMin.toLocaleString('de-DE')))
+        .replace(/{{SALARY_MAX}}/g, esc(tmpl.salaryMax.toLocaleString('de-DE')))
         .replace(/{{DESCRIPTION}}/g, esc(fullCustomDescription))
         .replace(/{{LOCAL_CONTEXT}}/g, localContextHtml)
         .replace(/{{TASKS_LIST}}/g, taskList.map(t => `<li>${esc(t)}</li>`).join(''))
@@ -546,34 +547,25 @@ function generateIndeedFeed(jobs) {
   <publisherurl>${SITE_URL}</publisherurl>
   <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n`;
   for (const job of jobs) {
-    // Re-calculate sections for the feed
-    const sections = [
-        { title: 'Ihre Aufgaben im Detail', content: job.taskList.map(t => `- ${t}`).join('\n      ') },
-        { title: 'Das bringen Sie mit', content: job.reqList.map(r => `- ${r}`).join('\n      ') },
-        { title: 'Vorteile bei uns', content: job.benefitList.map(b => `- ${b}`).join('\n      ') }
-    ];
-    // We can even shuffle the sections in the XML description
-    const xmlShuffledSections = [...sections].sort(() => 0.5 - Math.random());
-
-    const fullDescription = `
-      ${job.randomIntro}
+    const htmlDescription = `
+      <p><strong>${esc(job.randomIntro)}</strong></p>
+      <p>${esc(job.randomLocalContext)}</p>
+      <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
       
-      ${job.randomLocalContext}
+      <p>${esc(job.description)}</p>
 
-      Stellenangebot: ${job.title} in ${job.location}
+      <h3>Ihre Aufgaben:</h3>
+      <ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
 
-      ${job.description}
+      <h3>Anforderungen:</h3>
+      <ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
 
-      ${xmlShuffledSections.map(s => `${s.title}:\n      ${s.content}`).join('\n\n      ')}
+      <h3>Ihre Vorteile:</h3>
+      <ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
 
-      Vergütung:
-      ${job.salary} € Brutto/Monat plus eventuelle Zulagen.
+      <p>${esc(job.randomOutro)}</p>
 
-      Lage & Bewerbung:
-      ${job.randomOutro}
-
-      Hinweis zur Stellenvermittlung:
-      ${VERMITTLUNGSHINWEIS}
+      <p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>
     `.trim();
 
     xml += `  <job>
@@ -585,7 +577,7 @@ function generateIndeedFeed(jobs) {
     <city><![CDATA[${job.location.replace(/-.*/, '')}]]></city>
     <state><![CDATA[${job.region}]]></state>
     <country><![CDATA[DE]]></country>
-    <description><![CDATA[${fullDescription}]]></description>
+    <description><![CDATA[${htmlDescription}]]></description>
     <salary><![CDATA[${job.salary} € Brutto/Monat]]></salary>
     <jobtype><![CDATA[vollzeit]]></jobtype>
     <expirationdate><![CDATA[${job.validThrough}]]></expirationdate>
@@ -605,13 +597,6 @@ function generateTalentFeed(jobs) {
   for (const job of jobs) {
     const tmpl = JOB_TEMPLATES.find(t => t.title === job.title);
     
-    const sections = [
-        { title: 'Ihre Aufgaben', content: `<ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` },
-        { title: 'Anforderungen', content: `<ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` },
-        { title: 'Ihre Vorteile', content: `<ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` }
-    ];
-    const htmlShuffledSections = [...sections].sort(() => 0.5 - Math.random());
-
     const htmlDescription = `
       <p><strong>${esc(job.randomIntro)}</strong></p>
       <p>${esc(job.randomLocalContext)}</p>
@@ -619,7 +604,14 @@ function generateTalentFeed(jobs) {
       
       <p>${esc(job.description)}</p>
 
-      ${htmlShuffledSections.map(s => `<h3>${esc(s.title)}:</h3>${s.content}`).join('')}
+      <h3>Ihre Aufgaben:</h3>
+      <ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+
+      <h3>Anforderungen:</h3>
+      <ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
+
+      <h3>Ihre Vorteile:</h3>
+      <ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
 
       <p>${esc(job.randomOutro)}</p>
 
