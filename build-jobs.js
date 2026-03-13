@@ -77,6 +77,20 @@ function shuffle(array) {
   return array;
 }
 
+const TITLE_SYNONYMS = {
+  'Sicherheitsmitarbeiter (m/w/d)': ['Sicherheitskraft (m/w/d)', 'Security Guard (m/w/d)', 'Mitarbeiter im Sicherheitsdienst (m/w/d)', 'Security Mitarbeiter (m/w/d)', 'Fachkraft für Objektschutz (m/w/d)'],
+  'Wachschutzmitarbeiter (m/w/d)': ['Mitarbeiter im Wachschutz (m/w/d)', 'Wachmann / Wachfrau (m/w/d)', 'Security für Wachdienst (m/w/d)', 'Wachschutz Kraft (m/w/d)'],
+  'ÖPNV-Sicherheitskraft (m/w/d)': ['Sicherheitskraft im Nahverkehr (m/w/d)', 'Mitarbeiter Bahnschutz (m/w/d)', 'Security für Bus & Bahn (m/w/d)'],
+  'Geld- & Werttransportfahrer/-in (m/w/d)': ['Fahrer für Werttransporte (m/w/d)', 'Sicherheitsfahrer (m/w/d)', 'Mitarbeiter Logistik & Sicherheit (m/w/d)'],
+  'Revierwachmann/-frau (m/w/d)': ['Revierfahrer Sicherheit (m/w/d)', 'Mobiler Wachdienst (m/w/d)', 'Streifenfahrer (m/w/d)'],
+  'Empfangskraft Sicherheit (m/w/d)': ['Sicherheitskraft Empfang (m/w/d)', 'Pförtner / Security (m/w/d)', 'Mitarbeiter Objektempfang (m/w/d)'],
+  'Veranstaltungsschutz (m/w/d)': ['Event Security (m/w/d)', 'Ordner / Sicherheitsdienst (m/w/d)', 'Mitarbeiter Crowd Management (m/w/d)'],
+  'Objektschutzmitarbeiter (m/w/d)': ['Mitarbeiter Objektschutz (m/w/d)', 'Sicherheitskraft Objektsicherung (m/w/d)', 'Security für Industrie (m/w/d)'],
+  'Werkschutzmitarbeiter (m/w/d)': ['Sicherheitskraft Werkschutz (m/w/d)', 'Mitarbeiter Werksicherheit (m/w/d)', 'Industriesicherheit (m/w/d)'],
+  'Einzelhandelsdetektiv/-in (m/w/d)': ['Laden- / Kaufhausdetektiv (m/w/d)', 'Sicherheitsmitarbeiter Einzelhandel (m/w/d)', 'Doorman / Detektiv (m/w/d)'],
+  'Bahnsicherheitskraft (m/w/d)': ['Sicherheitsmitarbeiter Bahn (m/w/d)', 'Security DB / Bahnschutz (m/w/d)', 'Sicherheitsdienst Schienenverkehr (m/w/d)']
+};
+
 // ============================================================
 // GENERATE ALL JOB PAGES
 // ============================================================
@@ -91,8 +105,16 @@ function generateAllJobs(template) {
 
   for (const tmpl of JOB_TEMPLATES) {
     for (const city of CITIES) {
+      // 1. Title Variety
+      const synonyms = TITLE_SYNONYMS[tmpl.title] || [];
+      const allTitles = [tmpl.title, ...synonyms];
+      const randomTitle = allTitles[Math.floor(Math.random() * allTitles.length)];
+
       const slug = slugify(`${tmpl.title}-${city.name}`);
       const jobUrl = `${SITE_URL}/jobs/${slug}.html`;
+
+      // 2. Unique Reference Number
+      const refNumber = `ZSBV-${city.plz}-${Math.floor(1000 + Math.random() * 9000)}-${tmpl.title.substring(0,3).toUpperCase()}`;
 
       // Randomize order of lists for uniqueness
       const taskList = shuffle(tmpl.aufgaben.split(';').map(t => t.trim()).filter(Boolean));
@@ -107,7 +129,7 @@ function generateAllJobs(template) {
       
       const localContextHtml = `<strong>Besonderheiten für ${city.name}:</strong> ${randomLocalContext}`;
 
-      // Variations for the intro to avoid duplicate detection
+      // Variations for the intro to avoid duplicate detection (Mega-Pool 2.0)
       const introVariations = [
         `Werden Sie Teil unseres Sicherheits-Teams in ${city.name}!`,
         `Hier ist Ihre Chance: Neuer Job als ${tmpl.title} in ${city.name}.`,
@@ -123,7 +145,14 @@ function generateAllJobs(template) {
         `Mitarbeiter für Sicherheit (${tmpl.title}) in ${city.name} gesucht.`,
         `Top Job-Chance: Werden Sie JETZT ${tmpl.title} in ${city.name}.`,
         `Bereit für was Neues? Wir suchen ${tmpl.title} in ${city.name}.`,
-        `Verstärken Sie uns in ${city.name} als ${tmpl.title}.`
+        `Verstärken Sie uns in ${city.name} als ${tmpl.title}.`,
+        `Sicherheitskarriere in ${city.name} starten: Wir suchen Sie als ${tmpl.title}.`,
+        `Arbeiten bei ZSBV in ${city.name}: Werden Sie ${tmpl.title}.`,
+        `Jetzt bewerben in ${city.name}: Ihre Chance als ${tmpl.title}.`,
+        `Sicherheitsprofi in ${city.name} werden: Wir stellen ${tmpl.title} ein.`,
+        `Ihr neuer Weg in ${city.name}: Starten Sie als ${tmpl.title}.`,
+        `Gemeinsam für Sicherheit in ${city.name}: Wir suchen ${tmpl.title}.`,
+        `Chance nutzen in ${city.name}: Werden Sie Teil von uns als ${tmpl.title}.`
       ];
       const randomIntro = introVariations[Math.floor(Math.random() * introVariations.length)];
 
@@ -137,7 +166,15 @@ function generateAllJobs(template) {
         `Wir erwarten Sie in ${city.name} – jetzt Kontakt aufnehmen!`,
         `Gemeinsam für Sicherheit in ${city.name} sorgen.`,
         `Ihre Bewerbung für ${city.name} ist bei uns willkommen.`,
-        `Kommen Sie in unser Team in ${city.name}!`
+        `Kommen Sie in unser Team in ${city.name}!`,
+        `ZSBV: Ihr Partner für Jobsicherheit in ${city.name}.`,
+        `Wir freuen uns darauf, Sie in ${city.name} kennenzulernen.`,
+        `Starten Sie Ihre Zukunft noch heute in ${city.name}.`,
+        `Ihr Weg zum Erfolg in ${city.name} beginnt hier.`,
+        `Werden Sie Teil der ZSBV-Familie in ${city.name}.`,
+        `Machen Sie den nächsten Schritt in ${city.name}.`,
+        `Bewerben Sie sich ganz unkompliziert für ${city.name}.`,
+        `Wir blicken gespannt auf Ihre Bewerbung in ${city.name}.`
       ];
       const randomOutro = outroVariations[Math.floor(Math.random() * outroVariations.length)];
 
@@ -263,7 +300,7 @@ function generateAllJobs(template) {
       jobs.push({ 
         slug, 
         html, 
-        title: tmpl.title, 
+        title: randomTitle, 
         location: city.name, 
         region: city.region, 
         salary, 
@@ -275,7 +312,9 @@ function generateAllJobs(template) {
         reqList,
         benefitList,
         randomIntro,
-        randomLocalContext
+        randomLocalContext,
+        randomOutro,
+        refNumber
       });
     }
   }
@@ -540,7 +579,7 @@ function generateIndeedFeed(jobs) {
     xml += `  <job>
     <title><![CDATA[${job.title}]]></title>
     <date><![CDATA[${new Date(job.datePosted).toUTCString()}]]></date>
-    <referencenumber><![CDATA[${job.slug}]]></referencenumber>
+    <referencenumber><![CDATA[${job.refNumber}]]></referencenumber>
     <url><![CDATA[${job.jobUrl}]]></url>
     <company><![CDATA[${COMPANY_NAME}]]></company>
     <city><![CDATA[${job.location.replace(/-.*/, '')}]]></city>
@@ -595,7 +634,7 @@ function generateTalentFeed(jobs) {
     <country><![CDATA[DE]]></country>
     <dateposted><![CDATA[${job.datePosted}]]></dateposted>
     <expirationdate><![CDATA[${job.validThrough}]]></expirationdate>
-    <referencenumber><![CDATA[${job.slug}]]></referencenumber>
+    <referencenumber><![CDATA[${job.refNumber}]]></referencenumber>
     <url><![CDATA[${job.jobUrl}]]></url>
     <description><![CDATA[${htmlDescription}]]></description>
     <salary>
