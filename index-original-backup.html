@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicherheit-Karriere | Ihre Karriere in der Sicherheitsbranche</title>
+    <meta name="description"
+        content="Sicherheit-Karriere - Die zentrale Plattform fuer Ihre Karriere in der Sicherheitswirtschaft.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">
+            <img src="images/logo-zsbv.png" alt="ZSBV Logo"
+                style="width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(200, 168, 78, 0.3));">
+            <div class="nav-logo-group">
+                <div class="nav-logo-text">Sicherheit<span>-Karriere</span></div>
+                <div class="nav-logo-sub">Zentralstelle f&#252;r Sichere Bildungsvermittlung</div>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#jobs">Stellen</a></li>
+            <li><a href="#about">&#220;ber uns</a></li>
+            <li><a href="#services">Ausbildung</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="unternehmen.html">F&#252;r Unternehmen</a></li>
+        </ul>
+        <div class="nav-contact">
+            <a href="https://wa.me/4915XXXXXXXX" target="_blank" class="nav-whatsapp"
+                title="Fragen? Schreib uns auf WhatsApp"
+                style="display:inline-flex;align-items:center;gap:6px;color:#25D366;font-size:14px;font-weight:600;text-decoration:none;transition:opacity 0.3s;"><svg
+                    width="22" height="22" viewBox="0 0 24 24" fill="#25D366">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>Fragen?</a>
+            <a href="mailto:info@sicherheit-karriere.de" class="nav-phone">info@sicherheit-karriere.de</a>
+            <a href="#contact" class="nav-cta">Jetzt starten</a>
+        </div>
+        <button class="nav-menu-btn" aria-label="Men&#252; &#246;ffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero-tower.png" alt="Modernes Sicherheitsgeb&#228;ude bei Nacht" loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-lines"></div>
+        <div class="hero-content">
+            <p class="hero-label">Ihre Sicherheitskarriere beginnt hier</p>
+            <h1 class="hero-title">Wir schaffen Sicherheit</h1>
+            <p class="hero-subtitle">
+                Jede Karriere beginnt mit dem ersten Schritt. Wir begleiten Sie von der Qualifizierung bis zum
+                erfolgreichen Jobeinstieg in die Sicherheitswirtschaft.
+            </p>
+        </div>
+        <a href="#jobs" class="hero-scroll-indicator">
+            <span>Stellenangebote</span>
+            <div class="scroll-line"></div>
+        </a>
+    </section>
+
+    <!-- STELLENANGEBOTE -->
+    <section class="section" id="jobs">
+        <div class="container">
+            <div class="jobs-header" style="text-align:center;">
+                <p class="section-label reveal">Aktuelle Stellenangebote</p>
+                <h2 class="section-heading reveal">Jetzt als Quereinsteiger durchstarten</h2>
+                <p class="section-text reveal" style="margin: 0 auto 48px;">
+                    Geben Sie Ihre Postleitzahl ein und finden Sie offene Stellen in Ihrer N&#228;he.
+                </p>
+
+                <!-- PLZ SUCHFELD -->
+                <div class="plz-search reveal" id="plzSearch">
+                    <button class="plz-location-btn" onclick="getLocation()" title="Standort verwenden"
+                        id="locationBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                        </svg>
+                    </button>
+                    <input type="text" class="plz-input" id="plzInput" placeholder="PLZ eingeben, z.B. 10115"
+                        maxlength="5" inputmode="numeric" autocomplete="off">
+                    <button class="plz-search-btn" onclick="searchJobs()" id="searchBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                        Stellen finden
+                    </button>
+                </div>
+                <p class="plz-hint reveal" id="plzHint"></p>
+            </div>
+
+            <!-- DYNAMISCHE JOBS -->
+            <div class="jobs-grid" id="jobsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="section-label reveal">Warum wir?</p>
+                    <h2 class="section-heading reveal">Ihr Weg in die Sicherheitsbranche</h2>
+                    <p class="section-text reveal">
+                        Wir vermitteln Quereinsteiger in gut bezahlte Jobs in der Sicherheitsbranche &#8211;
+                        inklusive kostenloser Qualifizierung und anschlie&#223;ender Einsatzvermittlung.
+                    </p>
+                    <div class="about-features stagger-children">
+                        <div class="about-feature reveal" style="--i: 0">
+                            <h4>Aktive Vermittlung</h4>
+                            <p>Nach erfolgreichem Abschluss unterst&#252;tzen wir Sie gezielt bei der Jobsuche.</p>
+                        </div>
+                        <div class="about-feature reveal" style="--i: 1">
+                            <h4>Kostenlos f&#252;r Sie</h4>
+                            <p>Qualifizierung &#252;ber Bildungsgutschein &#8211; komplett kostenlos.</p>
+                        </div>
+                        <div class="about-feature reveal" style="--i: 2">
+                            <h4>Schneller Einstieg</h4>
+                            <p>Vom ersten Gespr&#228;ch bis zum Arbeitsvertrag in wenigen Wochen.</p>
+                        </div>
+                        <div class="about-feature reveal" style="--i: 3">
+                            <h4>Bundesweit</h4>
+                            <p>Online-Qualifizierung &#8211; egal wo Sie wohnen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image-wrapper reveal-scale">
+                        <img src="images/security-guard.png" alt="Sicherheitsmitarbeiter">
+                    </div>
+                    <div class="about-badge reveal">
+                        <div class="about-badge-number" data-counter="15000" data-suffix="+">0</div>
+                        <div class="about-badge-text">Offene Stellen</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="services-header">
+                <p class="section-label reveal">Ausbildungsprogramm</p>
+                <h2 class="section-heading reveal">Ihre Qualifizierung f&#252;r die Sicherheitsbranche</h2>
+                <p class="section-text reveal">
+                    Mit der &#167;34a Sachkundepr&#252;fung (IHK) erhalten Sie die gesetzlich vorgeschriebene
+                    Qualifikation f&#252;r das Bewachungsgewerbe &#8211; kostenlos &#252;ber Bildungsgutschein.
+                </p>
+            </div>
+            <div class="services-grid stagger-children"
+                style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
+                <a href="sachkunde-34a.html" class="service-card reveal"
+                    style="--i: 0; text-decoration: none; color: inherit;">
+                    <h3>&#167;34a Sachkundepr&#252;fung (IHK)</h3>
+                    <p>Die gesetzlich vorgeschriebene Qualifikation f&#252;r das Sicherheitsgewerbe.
+                        Intensive Vorbereitung auf die IHK-Pr&#252;fung mit hoher Bestehensquote.
+                        Kostenlos &#252;ber Bildungsgutschein &#8211; inklusive aktiver Jobvermittlung.</p>
+                    <span class="learn-more">Mehr erfahren &#8594;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SO FUNKTIONIERT'S -->
+    <section class="section" id="how">
+        <div class="container">
+            <div class="how-header" style="text-align:center; margin-bottom: 64px;">
+                <p class="section-label reveal">So einfach geht's</p>
+                <h2 class="section-heading reveal">In 3 Schritten zum neuen Job</h2>
+            </div>
+            <div class="benefits-grid stagger-children" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="benefit-card reveal" style="--i: 0; text-align:center;">
+                    <h4>1. Bewerben</h4>
+                    <p>W&#228;hlen Sie eine Stelle und f&#252;llen Sie das kurze Bewerbungsformular aus.</p>
+                </div>
+                <div class="benefit-card reveal" style="--i: 1; text-align:center;">
+                    <h4>2. Qualifizieren</h4>
+                    <p>Kostenlose Ausbildung &#252;ber Bildungsgutschein &#8211; online von zu Hause.</p>
+                </div>
+                <div class="benefit-card reveal" style="--i: 2; text-align:center;">
+                    <h4>3. Arbeiten</h4>
+                    <p>Aktive Vermittlung in ein unbefristetes Arbeitsverh&#228;ltnis &#8211; sofort nach der
+                        Pr&#252;fung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARALLAX DIVIDER -->
+    <div class="parallax-divider">
+        <img src="images/cityscape.png" alt="Sicherheit bei Nacht" data-parallax="0.2">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container" style="text-align:center;">
+            <p class="section-label reveal">Fragen?</p>
+            <h2 class="contact-heading reveal">Wir helfen Ihnen gerne weiter</h2>
+            <p class="contact-text reveal">
+                Sie haben Fragen zu einer Stelle oder zum Bewerbungsprozess?
+                Rufen Sie uns an oder schreiben Sie uns &#8211; wir beraten Sie pers&#246;nlich.
+            </p>
+            <div class="contact-box reveal-scale">
+                <p class="contact-box-label">Kontakt</p>
+                <p class="contact-name">Sicherheit-Karriere</p>
+                <div class="contact-divider"></div>
+                <div class="contact-info">
+                    <p><a href="mailto:info@zsbv.de">info@zsbv.de</a></p>
+                    <p><a href="mailto:info@sicherheit-karriere.de">info@sicherheit-karriere.de</a></p>
+                    <p><a href="https://www.sicherheit-karriere.de">www.sicherheit-karriere.de</a></p>
+                </div>
+            </div>
+            <br>
+            <a href="mailto:info@zsbv.de" class="contact-cta-btn reveal">E-Mail schreiben</a>
+        </div>
+    </section>
+
+    <!-- BEWERBUNGS-MODAL -->
+    <div class="modal-overlay" id="applyModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 class="modal-title">Bewerbung</h2>
+            <div class="modal-job-card" id="modalJobCard"></div>
+            <form class="modal-form" id="applyForm" name="bewerbung" method="POST" data-netlify="true"
+                enctype="multipart/form-data" onsubmit="submitForm(event)">
+                <input type="hidden" name="form-name" value="bewerbung">
+                <input type="hidden" name="subject" id="hiddenSubject">
+                <input type="hidden" name="stelle" id="hiddenJobTitle">
+                <input type="hidden" name="standort" id="hiddenLocation">
+                <input type="hidden" name="gehalt" id="hiddenSalary">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Vorname *</label>
+                        <input type="text" name="vorname" required placeholder="Max">
+                    </div>
+                    <div class="form-group">
+                        <label>Nachname *</label>
+                        <input type="text" name="nachname" required placeholder="Mustermann">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>E-Mail *</label>
+                        <input type="email" name="email" required placeholder="max@beispiel.de">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefonnummer *</label>
+                        <input type="tel" name="telefon" required placeholder="0170 1234567">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Sind Sie aktuell arbeitssuchend gemeldet? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="arbeitssuchend" value="ja" required
+                                onchange="toggleAgentur(true)"> Ja
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="arbeitssuchend" value="nein" onchange="toggleAgentur(false)"> Nein
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="agenturGroup" style="display:none;">
+                    <label>Wo sind Sie gemeldet? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="agentur" value="jobcenter"> Jobcenter
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="agentur" value="agentur"> Agentur f&#252;r Arbeit
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Lebenslauf hochladen (PDF, max. 10 MB) *</label>
+                    <div class="file-upload" id="fileUpload">
+                        <input type="file" name="lebenslauf" accept=".pdf,.doc,.docx" id="cvFile"
+                            onchange="showFileName(this)" required>
+                        <div class="file-upload-label" id="fileLabel">
+                            <span>&#128206;</span> Datei ausw&#228;hlen oder hierher ziehen
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Nachricht (optional)</label>
+                    <textarea name="nachricht" rows="3"
+                        placeholder="Erz&#228;hlen Sie uns kurz etwas &#252;ber sich..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="datenschutz" required>
+                        Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerkl&#228;rung</a> gelesen
+                        und stimme der Verarbeitung meiner Daten im Rahmen des Bewerbungsverfahrens zu. *
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label" style="font-size:12px;color:#8a9ab5;line-height:1.5;">
+                        <input type="checkbox" name="partnervermittlung" required>
+                        Ich willige ein, dass die ZSBV – Zentralstelle für Sichere Bildungs-Vermittlung meine
+                        Bewerbungsdaten an ausgewählte Kooperationspartner in der Sicherheitsbranche weiterleiten darf,
+                        um mir geeignete Stellenangebote und Qualifizierungsmaßnahmen zu vermitteln. Diese Einwilligung
+                        kann ich jederzeit widerrufen. *
+                    </label>
+                </div>
+                <button type="submit" class="form-submit">Bewerbung absenden &#8594;</button>
+                <p class="form-hint">Ihre Daten werden vertraulich behandelt und ausschlie&#223;lich f&#252;r den
+                    Bewerbungsprozess verwendet.</p>
+            </form>
+            <div class="modal-success" id="modalSuccess" style="display:none;">
+                <div class="success-icon">&#10003;</div>
+                <h3>Bewerbung gesendet!</h3>
+                <p>Vielen Dank f&#252;r Ihre Bewerbung. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+                <button class="form-submit" onclick="closeModal()">Schlie&#223;en</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Sicherheit<span>-Karriere</span></div>
+                <div class="footer-links">
+                    <a href="#jobs">Stellen</a>
+                    <a href="#about">&#220;ber uns</a>
+                    <a href="#services">Ausbildung</a>
+                    <a href="#contact">Kontakt</a>
+                    <a href="unternehmen.html">F&#252;r Unternehmen</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                    <a href="impressum.html">Impressum</a>
+                    <a href="alle-jobs.html">Alle Jobs von A-Z</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&#169; 2026 ZSBV &#8211; Zentralstelle f&#252;r Sichere Bildungs-Vermittlung. Alle Rechte
+                    vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-inner">
+            <p class="cookie-text">
+                Diese Website verwendet Google Fonts zur Darstellung. Dabei werden Daten an Google
+                &#252;bermittelt. N&#228;heres erfahren Sie in unserer
+                <a href="datenschutz.html">Datenschutzerkl&#228;rung</a>.
+            </p>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-reject" onclick="handleCookieConsent(false)">Nur
+                    notwendige</button>
+                <button class="cookie-btn cookie-btn-accept" onclick="handleCookieConsent(true)">Akzeptieren</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="animations.js"></script>
+    <script>
+        // Cookie Consent
+        (function () {
+            const consent = localStorage.getItem('cookie_consent');
+            const banner = document.getElementById('cookieBanner');
+            if (consent !== null) {
+                banner.classList.add('hidden');
+            }
+        })();
+
+        function handleCookieConsent(accepted) {
+            localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+            document.getElementById('cookieBanner').classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>

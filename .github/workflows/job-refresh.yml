@@ -1,0 +1,30 @@
+name: Refresh Job Dates
+
+on:
+  schedule:
+    # Runs at 00:00 every 3 days
+    - cron: '0 0 */3 * *'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/checkout@v3
+        with:
+          python-version: '3.9'
+
+      - name: Run refresh script
+        run: python scripts/refresh_jobs.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'Job Freshness Bot'
+          git config --global user.email 'bot@zsbv.de'
+          git add jobs/*.html
+          git commit -m "Automated job refresh - $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push

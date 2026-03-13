@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ZSBV Flyer - Druckvorlage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;500;700;800;900&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        :root {
+            --navy: #060e1a;
+            --navy-dark: #03080f;
+            --gold: #c8a84e;
+            --gold-light: #d4b86a;
+            --white: #ffffff;
+            --silver: #e2e8f0;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .print-item {
+            width: 111mm;
+            height: 216mm;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 50px;
+        }
+
+        /* Front Page Styles */
+        .flyer-front {
+            position: relative;
+            background: var(--navy) !important;
+            height: 100%;
+            color: var(--white);
+            padding: 8mm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .flyer-front img.bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.3;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(6, 14, 26, 0.6) 0%, rgba(6, 14, 26, 1) 100%);
+            z-index: 2;
+        }
+
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .logo {
+            width: 55mm;
+            height: auto;
+            margin-top: 6mm;
+            margin-bottom: 6mm;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+        }
+
+        .headline {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22pt;
+            line-height: 1.1;
+            font-weight: 900;
+            margin-bottom: 8mm;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        .headline span {
+            color: var(--gold);
+        }
+
+        .action-box {
+            background: rgba(6, 14, 26, 0.9);
+            border-radius: 3mm;
+            padding: 4mm;
+            border: 1px solid rgba(200, 168, 78, 0.3);
+            width: 100%;
+            margin-bottom: 6mm;
+        }
+
+        .action-box h3 {
+            color: #e53e3e;
+            font-size: 10pt;
+            font-weight: 900;
+            margin-bottom: 2mm;
+        }
+
+        .action-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8mm;
+            padding: 2mm 0;
+            width: 100%;
+        }
+
+        .qr-placeholder {
+            width: 24mm;
+            height: 24mm;
+            background: white;
+            padding: 2.5mm;
+            border: 1px solid var(--gold);
+            flex-shrink: 0;
+            border-radius: 2mm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .qr-placeholder img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .action-text {
+            text-align: left;
+            font-size: 9pt;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .wa-num {
+            font-weight: 900;
+            color: #25D366;
+            font-size: 11pt;
+            margin-top: 1.5mm;
+        }
+
+        .bullets-box {
+            text-align: left;
+            width: 100%;
+            padding-left: 2mm;
+            margin-top: 4mm;
+        }
+
+        .bullets-box h4 {
+            color: var(--gold);
+            font-size: 14pt;
+            margin-bottom: 4mm;
+            text-transform: uppercase;
+        }
+
+        .bullets-box ul {
+            list-style: none;
+            font-size: 11pt;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+
+        .bullets-box li::before {
+            content: '✔';
+            color: var(--gold);
+            margin-right: 8px;
+        }
+
+        .footer-text {
+            color: var(--gold);
+            font-size: 10pt;
+            font-weight: 800;
+            border-top: 1px solid rgba(200, 168, 78, 0.4);
+            padding-top: 3mm;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Back Page Styles */
+        .flyer-back {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%) !important;
+            height: 100%;
+            padding: 8mm;
+            color: var(--silver);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .back-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 14pt;
+            font-weight: 800;
+            margin-bottom: 5mm;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .back-title span {
+            color: var(--gold);
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 4mm;
+            margin-bottom: 6mm;
+            flex: 1;
+        }
+
+        .step {
+            display: flex;
+            gap: 3mm;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 2mm;
+            padding: 3mm;
+        }
+
+        .step-num {
+            width: 7mm;
+            height: 7mm;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 9pt;
+            flex-shrink: 0;
+        }
+
+        .step-text h4 {
+            font-size: 9pt;
+            color: var(--white);
+            margin-bottom: 1mm;
+        }
+
+        .step-text p {
+            font-size: 7.5pt;
+            color: var(--silver);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3mm;
+            margin-bottom: 6mm;
+        }
+
+        .info-col {
+            background: rgba(200, 168, 78, 0.05);
+            border-top: 2px solid var(--gold);
+            padding: 3mm;
+        }
+
+        .info-col h5 {
+            color: var(--gold);
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            margin-bottom: 2mm;
+            font-family: 'Outfit';
+        }
+
+        .info-col ul {
+            list-style: none;
+            font-size: 6.5pt;
+        }
+
+        .info-col li {
+            margin-bottom: 1.5mm;
+            position: relative;
+            padding-left: 2mm;
+        }
+
+        .info-col li::before {
+            content: '•';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(200, 168, 78, 0.2);
+            border-radius: 4mm;
+            padding: 5mm;
+            margin-top: 4mm;
+        }
+
+        .glass-card h3 {
+            color: var(--gold);
+            font-size: 10pt;
+            margin-bottom: 2mm;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1mm;
+            text-align: center;
+        }
+
+        .glass-card ul {
+            list-style: none;
+            font-size: 8.5pt;
+            color: var(--silver);
+        }
+
+        .glass-card li::before {
+            content: '✓';
+            color: var(--navy);
+            background: var(--gold);
+            border-radius: 50%;
+            width: 3.5mm;
+            height: 3.5mm;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6pt;
+            margin-right: 2mm;
+        }
+
+        .impressum {
+            font-size: 6pt;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            margin-top: auto;
+            padding-top: 2mm;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .print-item {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+
+            .print-item::before {
+                display: none;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <!-- FRONT PAGE -->
+    <div class="print-item">
+        <div class="flyer-front">
+            <img src="images/hero-tower.webp" class="bg-image">
+            <div class="overlay"></div>
+            <div class="content-layer">
+                <img src="images/logo-zsbv.png" class="logo">
+                <h1 class="headline">Dein sicherer<br>Job in der<br><span>Sicherheitsbranche</span></h1>
+
+                <div class="action-box">
+                    <h3>EXPRESS-BEWERBUNG</h3>
+                    <div class="action-content">
+                        <div id="qrFront" class="qr-placeholder"></div>
+                        <div class="action-text">
+                            Kamera draufhalten &<br><strong>in 60s bewerben!</strong><br>Oder per WhatsApp:
+                            <div class="wa-num">+49 1517 2868394</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bullets-box">
+                    <h4>Du bist...</h4>
+                    <ul>
+                        <li>beim Arbeitsamt oder Jobcenter gemeldet?</li>
+                        <li>ohne Eintrag im F&#252;hrungszeugnis?</li>
+                        <li>auf der Suche nach einem sicheren Job?</li>
+                        <li>bereit f&#252;r Verantwortung?</li>
+                    </ul>
+                </div>
+
+                <div class="footer-text">DEIN DIREKTER WEG IN DIE SICHERHEIT!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK PAGE -->
+    <div class="print-item">
+        <div class="flyer-back">
+            <h2 class="back-title">In 3 Schritten zum <span>Job</span></h2>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-text">
+                        <h4>Kostenfreie Beratung</h4>
+                        <p>Wir pr&#252;fen deine Eignung f&#252;r die Branche und bauen einen Karriereplan.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-text">
+                        <h4>Zertifizierte Vorbereitung</h4>
+                        <p>Intensive Vorbereitung auf die IHK-Sachkundepr&#252;fung (&sect;34a GewO).</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-text">
+                        <h4>Festeinstellung</h4>
+                        <p>Du startest direkt bei unseren gepr&#252;ften Partner-Unternehmen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-col">
+                    <h5>Perspektiven</h5>
+                    <ul>
+                        <li>Objektschutz</li>
+                        <li>Revierwachdienst</li>
+                        <li>Flughafensicherheit</li>
+                        <li>Doorman / Empfang</li>
+                        <li>Geld- & Werttransport</li>
+                    </ul>
+                </div>
+                <div class="info-col">
+                    <h5>Voraussetzungen</h5>
+                    <ul>
+                        <li>Arbeitsamt / Jobcenter gemeldet</li>
+                        <li>Sauberes F&#252;hrungszeugnis</li>
+                        <li>Deutsch (B1/B2 Level)</li>
+                        <li>Schichtbereitschaft</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>Warum mit der ZSBV?</h3>
+                <ul>
+                    <li>Für Quereinsteiger & Profis</li>
+                    <li>Wir besorgen den Bildungsgutschein</li>
+                    <li>Du machst den &sect;34a kostenlos</li>
+                    <li><strong>Zentralstelle f&#252;r Sichere Bildungsvermittlung</strong></li>
+                </ul>
+            </div>
+
+            <div class="impressum">
+                V.i.S.d.P.: Zentralstelle f&#252;r Sichere Bildungsvermittlung / N.R.International Management GmbH
+                &middot; Bahnhofstra&#223;e 15 &middot; 28790
+                Schwanewede
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new QRCode(document.getElementById("qrFront"), {
+                text: "https://www.sicherheit-karriere.de",
+                width: 80, height: 80, colorDark: "#060e1a", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.M
+            });
+            setTimeout(() => {
+                document.querySelectorAll('img').forEach(img => img.style.opacity = '1');
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

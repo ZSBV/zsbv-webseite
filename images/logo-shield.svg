@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="50" y1="0" x2="50" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E8C95A" />
+      <stop offset="100%" stop-color="#A08030" />
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="50" y1="10" x2="50" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#142238" />
+      <stop offset="100%" stop-color="#0A1628" />
+    </linearGradient>
+  </defs>
+  <!-- Outer shield (Gold) -->
+  <path d="M50 2 L95 22 L95 60 C95 85 75 108 50 118 C25 108 5 85 5 60 L5 22 Z" fill="url(#shieldGrad)" />
+  <!-- Inner shield (Navy) -->
+  <path d="M50 10 L88 27 L88 58 C88 80 70 100 50 109 C30 100 12 80 12 58 L12 27 Z" fill="url(#innerGrad)" />
+</svg>

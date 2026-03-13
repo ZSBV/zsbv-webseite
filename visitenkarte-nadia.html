@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visitenkarte - Nadia Auffarth</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;500;700;800;900&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        :root {
+            --navy: #060e1a;
+            --navy-dark: #03080f;
+            --gold: #c8a84e;
+            --white: #ffffff;
+            --silver: #e2e8f0;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .bc-wrapper {
+            width: 91mm;
+            height: 61mm;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .bc-front {
+            background: var(--navy) !important;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3mm;
+            position: relative;
+        }
+
+        .bc-logo {
+            width: 32mm;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+        }
+
+        .bc-slogan {
+            color: var(--white);
+            font-family: 'Outfit', sans-serif;
+            font-size: 7pt;
+            letter-spacing: 2pt;
+            text-transform: uppercase;
+            margin-top: 3mm;
+        }
+
+        .bc-back {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%) !important;
+            color: var(--silver);
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 5mm;
+            height: 100%;
+            position: relative;
+            text-align: center !important;
+        }
+
+        .bc-back::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1mm;
+            background: linear-gradient(90deg, var(--gold), transparent, var(--gold));
+        }
+
+        .bc-info {
+            margin-bottom: 4mm;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+
+        .bc-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 14pt;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1mm;
+            line-height: 1.1;
+        }
+
+        .bc-title {
+            color: var(--gold);
+            font-size: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 2pt;
+            margin-bottom: 4mm;
+            font-weight: 700;
+        }
+
+        .bc-contact {
+            font-size: 7.5pt;
+            line-height: 1.6;
+        }
+
+        .bc-contact strong {
+            color: var(--gold);
+            margin-right: 2mm;
+            width: 4mm;
+            display: inline-block;
+        }
+
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-placeholder {
+            width: 16mm;
+            height: 16mm;
+            background: #fff;
+            padding: 1.5mm !important;
+            border-radius: 1.5mm;
+            border: 1px solid var(--gold);
+            margin-bottom: 1mm;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+        }
+
+        .qr-placeholder img,
+        .qr-placeholder canvas {
+            width: 13mm !important;
+            height: 13mm !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+        }
+
+        .qr-text {
+            font-size: 5pt;
+            font-weight: 900;
+            color: var(--gold);
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 1pt;
+            line-height: 1.2;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .bc-wrapper {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+    <!-- VORDERSEITE -->
+    <div class="bc-wrapper">
+        <div class="bc-front">
+            <img src="images/logo-zsbv.png" class="bc-logo">
+            <div class="bc-slogan">Sicherheit &middot; Karriere</div>
+        </div>
+    </div>
+    <!-- RÜCKSEITE -->
+    <div class="bc-wrapper">
+        <div class="bc-back">
+            <div class="bc-info">
+                <div class="bc-name">Nadia Auffarth <span
+                        style="font-size: 8pt; font-weight: 500; opacity: 0.8;">MBA</span></div>
+                <div class="bc-title">Geschäftsleitung</div>
+                <div class="bc-contact">
+                    +49 1517 2868394<br>
+                    info@sicherheit-karriere.de<br>
+                    sicherheit-karriere.de<br>
+                    <div style="font-size: 5.5pt; margin-top: 3mm; color: var(--gold); font-weight: 700; opacity: 0.9;">
+                        Zentralstelle f&#252;r Sichere Bildungsvermittlung</div>
+                </div>
+            </div>
+            <div class="qr-section">
+                <div id="qrNadia" class="qr-placeholder"></div>
+                <div class="qr-text">Direkt bewerben</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new QRCode(document.getElementById("qrNadia"), {
+                text: "https://www.sicherheit-karriere.de",
+                width: 60, height: 60, colorDark: "#060e1a", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.M
+            });
+        });
+    </script>
+</body>
+
+</html>

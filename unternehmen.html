@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&#252;r Sicherheitsunternehmen | Sicherheit-Karriere</title>
+    <meta name="description"
+        content="Qualifizierte Sicherheitsmitarbeiter f&#252;r Ihr Unternehmen &#8211; vorselektiert, ausgebildet und sofort einsatzbereit.">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .partner-hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partner-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(200, 168, 78, 0.06) 0%, transparent 70%);
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .partner-hero .section-heading {
+            margin-bottom: 24px;
+        }
+
+        .partner-hero .section-text {
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+
+        .partner-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .partner-stat {
+            text-align: center;
+        }
+
+        .partner-stat-num {
+            font-family: var(--font-heading);
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .partner-stat-label {
+            font-size: 12px;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 6px;
+        }
+
+        .partner-content {
+            background: var(--navy);
+        }
+
+        .partner-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .partner-card {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(200, 168, 78, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .partner-card h3 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .partner-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--silver);
+            margin-bottom: 12px;
+        }
+
+        .partner-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .partner-card ul li {
+            font-size: 14px;
+            color: var(--silver);
+            padding: 6px 0;
+        }
+
+        .partner-cta-section {
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            transition: gap 0.3s;
+        }
+
+        .back-link:hover {
+            gap: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .partner-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .partner-stats {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar scrolled" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo-zsbv.png" alt="ZSBV Logo"
+                style="width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(200, 168, 78, 0.3));">
+            <div class="nav-logo-group">
+                <div class="nav-logo-text">Sicherheit<span>-Karriere</span></div>
+                <div class="nav-logo-sub">Zentralstelle f&#252;r Sichere Bildungsvermittlung</div>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="index.html#jobs">Stellen</a></li>
+            <li><a href="#partner-contact">Kontakt</a></li>
+        </ul>
+        <div class="nav-contact">
+            <a href="https://wa.me/4915172868394?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zur%20Sachkundepr%C3%BCfung%20nach%20%C2%A734a."
+                target="_blank" rel="noopener" class="nav-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Fragen?
+            </a>
+            <a href="mailto:partner@sicherheit-karriere.de" class="nav-cta">Partnerschaft anfragen</a>
+        </div>
+        <button class="nav-menu-btn" aria-label="Men&#252; &#246;ffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- PARTNER HERO -->
+    <section class="partner-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">&#8592; Zur&#252;ck zur Startseite</a>
+            <p class="section-label">F&#252;r Sicherheitsunternehmen</p>
+            <h1 class="section-heading">Qualifizierte Sicherheitsmitarbeiter f&#252;r Ihr Unternehmen</h1>
+            <p class="section-text">
+                Wir liefern Ihnen vorselektierte Bewerber &#8211; fachlich ausgebildet und bereit f&#252;r den Einsatz.
+            </p>
+            <div class="partner-stats">
+                <div class="partner-stat">
+                    <div class="partner-stat-num" data-counter="1200" data-suffix="+">0</div>
+                    <div class="partner-stat-label">Bewerber monatlich</div>
+                </div>
+                <div class="partner-stat">
+                    <div class="partner-stat-num" data-counter="100" data-suffix="%">0</div>
+                    <div class="partner-stat-label">Vorselektiert</div>
+                </div>
+                <div class="partner-stat">
+                    <div class="partner-stat-num" style="font-size: 30px; letter-spacing: -0.5px; padding-top: 10px;">
+                        Erfolgsbasiert</div>
+                    <div class="partner-stat-label">Faire Erfolgsprovision</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNER CONTENT -->
+    <section class="section partner-content">
+        <div class="container">
+            <div class="partner-grid">
+                <div class="partner-card reveal">
+                    <h3>Unser Ansatz</h3>
+                    <p>
+                        Wir rekrutieren bundesweit Quereinsteiger, die eine Karriere in der Sicherheitsbranche
+                        anstreben. Jeder Bewerber durchl&#228;uft einen mehrstufigen Auswahlprozess und wird
+                        &#252;ber zertifizierte Bildungsma&#223;nahmen qualifiziert.
+                    </p>
+                    <p>
+                        Das Ergebnis: Motivierte, gepr&#252;fte Mitarbeiter mit &#167;34a Sachkundepr&#252;fung,
+                        die ab Tag eins produktiv einsetzbar sind.
+                    </p>
+                </div>
+                <div class="partner-card reveal">
+                    <h3>Was Sie erhalten</h3>
+                    <ul>
+                        <li>Vorselektierte Bewerber mit &#167;34a-Qualifikation</li>
+                        <li>Monatlich frische Kandidatenprofile</li>
+                        <li>Pers&#246;nlicher Ansprechpartner</li>
+                        <li>Kein Recruiting-Aufwand f&#252;r Sie</li>
+                        <li>Flexible Besetzung nach Ihrem Bedarf</li>
+                        <li>Bundesweite Verf&#252;gbarkeit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNER CONTACT -->
+    <section class="section partner-cta-section" id="partner-contact">
+        <div class="container">
+            <p class="section-label reveal">Partnerschaft</p>
+            <h2 class="contact-heading reveal">Interesse an qualifizierten Mitarbeitern?</h2>
+            <p class="contact-text reveal">
+                Schreiben Sie uns &#8211; wir besprechen, wie wir Ihren Personalbedarf abdecken k&#246;nnen.
+            </p>
+            <div class="contact-box reveal-scale">
+                <p class="contact-box-label">Unternehmenskontakt</p>
+                <p class="contact-name">Sicherheit-Karriere</p>
+                <div class="contact-divider"></div>
+                <div class="contact-info">
+                    <p><a href="mailto:partner@sicherheit-karriere.de">partner@sicherheit-karriere.de</a></p>
+                </div>
+            </div>
+            <br>
+            <a href="mailto:partner@sicherheit-karriere.de" class="contact-cta-btn reveal">Jetzt Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Sicherheit<span>-Karriere</span></div>
+                <div class="footer-links">
+                    <a href="index.html">Startseite</a>
+                    <a href="index.html#jobs">Stellen</a>
+                    <a href="index.html#about">&#220;ber uns</a>
+                    <a href="index.html#contact">Kontakt</a>
+                    <a href="unternehmen.html">F&#252;r Unternehmen</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                    <a href="impressum.html">Impressum</a>
+                    <a href="alle-jobs.html">Alle Jobs von A-Z</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><strong>sicherheit-karriere.de &#8211; Ein Projekt der ZSBV (Zentralstelle f&#252;r Sichere
+                        Bildungsvermittlung)</strong><br>
+                    &#169; 2026 ZSBV. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+
+
+</body>
+
+</html>
