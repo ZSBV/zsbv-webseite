@@ -115,7 +115,15 @@ function generateAllJobs(template) {
         `Direktstart in ${city.name}: Wir suchen ab sofort ${tmpl.title}.`,
         `Sicherer Arbeitsplatz in ${city.name}: Bewerben Sie sich als ${tmpl.title}.`,
         `Karriere-Check in ${city.name}: Wir suchen Verstärkung als ${tmpl.title}.`,
-        `Lust auf Sicherheit? Starten Sie als ${tmpl.title} in ${city.name}.`
+        `Lust auf Sicherheit? Starten Sie als ${tmpl.title} in ${city.name}.`,
+        `Ihre Zukunft in ${city.name}: Bewerben Sie sich als ${tmpl.title}.`,
+        `Neu orientieren in ${city.name}: Wir suchen ${tmpl.title} ab sofort.`,
+        `ZSBV Job-Offensive: ${tmpl.title} für ${city.name} gesucht.`,
+        `Sicherheit geht vor: Werden Sie unser neuer ${tmpl.title} in ${city.name}.`,
+        `Mitarbeiter für Sicherheit (${tmpl.title}) in ${city.name} gesucht.`,
+        `Top Job-Chance: Werden Sie JETZT ${tmpl.title} in ${city.name}.`,
+        `Bereit für was Neues? Wir suchen ${tmpl.title} in ${city.name}.`,
+        `Verstärken Sie uns in ${city.name} als ${tmpl.title}.`
       ];
       const randomIntro = introVariations[Math.floor(Math.random() * introVariations.length)];
 
@@ -124,11 +132,24 @@ function generateAllJobs(template) {
         `Nutzen Sie Ihre Chance in ${city.name} und bewerben Sie sich noch heute.`,
         `Ihr neuer Job in ${city.name} ist nur einen Klick entfernt.`,
         `Starten Sie jetzt Ihre Karriere bei uns in ${city.name}.`,
-        `Werden Sie Teil der Erfolgsgeschichte in ${city.name}.`
+        `Werden Sie Teil der Erfolgsgeschichte in ${city.name}.`,
+        `Bewerben Sie sich jetzt und sichern Sie sich Ihren Platz in ${city.name}.`,
+        `Wir erwarten Sie in ${city.name} – jetzt Kontakt aufnehmen!`,
+        `Gemeinsam für Sicherheit in ${city.name} sorgen.`,
+        `Ihre Bewerbung für ${city.name} ist bei uns willkommen.`,
+        `Kommen Sie in unser Team in ${city.name}!`
       ];
       const randomOutro = outroVariations[Math.floor(Math.random() * outroVariations.length)];
 
-      // Construct a unique overall description
+      // Section Shuffling (Tasks, Requirements, Benefits)
+      const sections = [
+        { title: 'Ihre Aufgaben', content: `<ul>${taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` },
+        { title: 'Das bringen Sie mit', content: `<ul>${reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` },
+        { title: 'Ihre Vorteile bei uns', content: `<ul>${benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` }
+      ];
+      const shuffledSections = shuffle([...sections]);
+
+      // Construct a unique overall description for HTML
       const fullCustomDescription = `
         ${randomIntro} 
         
@@ -139,18 +160,19 @@ function generateAllJobs(template) {
         ${randomOutro}
       `.trim();
 
-      // Google for Jobs JSON-LD
+      // Google for Jobs JSON-LD (Rich formatting for Google)
+      const jsonLdDescription = `<p><strong>${esc(randomIntro)}</strong></p>` +
+        `<p>${esc(randomLocalContext)}</p>` +
+        `<p>${esc(tmpl.beschreibung)}</p>` +
+        shuffledSections.map(s => `<h3>${esc(s.title)}</h3>${s.content}`).join('') +
+        `<p>${esc(randomOutro)}</p>` +
+        `<p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>`;
+
       const jsonLd = {
         "@context": "https://schema.org",
         "@type": "JobPosting",
         "title": tmpl.title,
-        "description": `<p><strong>${esc(randomIntro)}</strong></p>` +
-          `<p>${esc(randomLocalContext)}</p>` +
-          `<p>${esc(tmpl.beschreibung)}</p>` +
-          `<h3>Ihre Aufgaben</h3><ul>${taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` +
-          `<h3>Das bringen Sie mit</h3><ul>${reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` +
-          `<h3>Ihre Vorteile bei uns</h3><ul>${benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` +
-          `<p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>`,
+        "description": jsonLdDescription,
         "identifier": {
           "@type": "PropertyValue",
           "name": COMPANY_NAME,
@@ -485,6 +507,15 @@ function generateIndeedFeed(jobs) {
   <publisherurl>${SITE_URL}</publisherurl>
   <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n`;
   for (const job of jobs) {
+    // Re-calculate sections for the feed
+    const sections = [
+        { title: 'Ihre Aufgaben im Detail', content: job.taskList.map(t => `- ${t}`).join('\n      ') },
+        { title: 'Das bringen Sie mit', content: job.reqList.map(r => `- ${r}`).join('\n      ') },
+        { title: 'Vorteile bei uns', content: job.benefitList.map(b => `- ${b}`).join('\n      ') }
+    ];
+    // We can even shuffle the sections in the XML description
+    const xmlShuffledSections = [...sections].sort(() => 0.5 - Math.random());
+
     const fullDescription = `
       ${job.randomIntro}
       
@@ -492,14 +523,9 @@ function generateIndeedFeed(jobs) {
 
       Stellenangebot: ${job.title} in ${job.location}
 
-      Ihre Aufgaben im Detail:
-      - ${job.taskList.join('\n      - ')}
+      ${job.description}
 
-      Das bringen Sie mit:
-      - ${job.reqList.join('\n      - ')}
-
-      Vorteile bei uns:
-      - ${job.benefitList.join('\n      - ')}
+      ${xmlShuffledSections.map(s => `${s.title}:\n      ${s.content}`).join('\n\n      ')}
 
       Vergütung:
       ${job.salary} € Brutto/Monat plus eventuelle Zulagen.
@@ -538,28 +564,23 @@ function generateTalentFeed(jobs) {
   <lastbuilddate>${new Date().toISOString()}</lastbuilddate>\n`;
 
   for (const job of jobs) {
-    // Find matching template for raw values (min/max salary)
     const tmpl = JOB_TEMPLATES.find(t => t.title === job.title);
     
+    const sections = [
+        { title: 'Ihre Aufgaben', content: `<ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` },
+        { title: 'Anforderungen', content: `<ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` },
+        { title: 'Ihre Vorteile', content: `<ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` }
+    ];
+    const htmlShuffledSections = [...sections].sort(() => 0.5 - Math.random());
+
     const htmlDescription = `
       <p><strong>${esc(job.randomIntro)}</strong></p>
       <p>${esc(job.randomLocalContext)}</p>
       <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
       
-      <h3>Ihre Aufgaben:</h3>
-      <ul>
-        ${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}
-      </ul>
+      <p>${esc(job.description)}</p>
 
-      <h3>Anforderungen:</h3>
-      <ul>
-        ${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}
-      </ul>
-
-      <h3>Ihre Vorteile:</h3>
-      <ul>
-        ${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}
-      </ul>
+      ${htmlShuffledSections.map(s => `<h3>${esc(s.title)}:</h3>${s.content}`).join('')}
 
       <p>${esc(job.randomOutro)}</p>
 

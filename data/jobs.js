@@ -14,7 +14,11 @@ module.exports = [
       'Als Wachschutzmitarbeiter in ${city} patrouillieren Sie primär bei Tag und Nacht durch lokale Industrie- und Gewerbegebiete, um maximale Prävention zu gewährleisten.',
       'Die Objektbewachung in ${city} erfordert ein wachsames Auge beim Schließdienst sowie bei der lückenlosen Dokumentation der Kontrollgänge.',
       'Schützen Sie Unternehmenswerte in ${city}: Sie sind verantwortlich für präventive Rundgänge und die schnelle Alarmverfolgung bei Vorfällen.',
-      'Ihr Fokus in ${city} liegt auf der stationären und mobilen Bewachung von Anlagen, die zentral an die städtische Verkehrsinfrastruktur angebunden sind.'
+      'Ihr Fokus in ${city} liegt auf der stationären und mobilen Bewachung von Anlagen, die zentral an die städtische Verkehrsinfrastruktur angebunden sind.',
+      'In den Industriegebieten von ${city} stellen Sie sicher, dass unbefugte Personen keinen Zutritt zu sensiblen Bereichen erhalten.',
+      'Übernehmen Sie in ${city} die Verantwortung für den Objektschutz und reagieren Sie kompetent auf alle Sicherheitsvorfälle.',
+      'Ihre Tätigkeit in ${city} umfasst die lückenlose Überwachung von Außenanlagen und die Sicherstellung der Verschlussordnung.',
+      'Werden Sie im Wachschutz in ${city} aktiv und tragen Sie maßgeblich zum Schutz lokaler Infrastrukturen bei.'
     ]
   },
   {
@@ -32,7 +36,11 @@ module.exports = [
       'In ${city} übernehmen Sie vielseitige Schutzaufgaben, von der Zutrittskontrolle bis zu regelmäßigen Kontrollrundgängen bei lokalen Unternehmen.',
       'Als Sicherheitsmitarbeiter in ${city} sind Sie der erste Ansprechpartner am Empfang und gewährleisten die Sicherheit von Mitarbeitern und Besuchern vor Ort.',
       'Das Einsatzgebiet in ${city} bietet abwechslungsreiche Schichten im Objekt- und Werkschutz mit einer idealen Anbindung an den örtlichen Nahverkehr.',
-      'Ihre Aufgabenbereiche in ${city} umfassen unter anderem die Alarmverfolgung und professionelle Intervention in modernen Wirtschaftsparks.'
+      'Ihre Aufgabenbereiche in ${city} umfassen unter anderem die Alarmverfolgung und professionelle Intervention in modernen Wirtschaftsparks.',
+      'Sichern Sie exklusive Gewerbeobjekte in ${city} und werden Sie Teil eines hochprofessionellen Sicherheits-Teams.',
+      'In ${city} sind Sie verantwortlich für die Aufrechterhaltung der Sicherheit und Ordnung in stark frequentierten Objekten.',
+      'Arbeiten Sie in ${city} an vorderster Front und schützen Sie Sachwerte sowie Personen durch Ihre aufmerksame Präsenz.',
+      'Das moderne Arbeitsumfeld in ${city} erfordert Zuverlässigkeit und ein Auge fürs Detail bei allen Kontrolltätigkeiten.'
     ]
   },
   {
@@ -50,7 +58,11 @@ module.exports = [
       'In den Bussen, Bahnen und an den Bahnhöfen von ${city} sorgen Sie als präsente Sicherheitskraft für das Wohlgefühl und den Schutz aller Fahrgäste.',
       'Der Nahverkehr in ${city} erfordert diplomatisches Geschick bei der Fahrgastbetreuung und eine deeskalierende Haltung in Konfliktsituationen.',
       'Als ÖPNV-Sicherheitskraft in ${city} arbeiten Sie eng mit lokalen Ordnungsbehörden zusammen und führen regelmäßige Streifengänge durch.',
-      'Ihre Präsenz an den Verkehrsknotenpunkten in ${city} reduziert Vandalismus und steigert das subjektive Sicherheitsgefühl der Pendler enorm.'
+      'Ihre Präsenz an den Verkehrsknotenpunkten in ${city} reduziert Vandalismus und steigert das subjektive Sicherheitsgefühl der Pendler enorm.',
+      'Helfen Sie mit, den öffentlichen Raum in ${city} sicherer zu machen – durch Aufmerksamkeit und konsequentes Einschreiten bei Regelverstößen.',
+      'In den Bahnhöfen von ${city} sind Sie der Garant für Sicherheit und stehen Reisenden bei Fragen kompetent zur Seite.',
+      'Die Sicherheit der Pendler in ${city} steht an erster Stelle, während Sie im Team für Ordnung in allen Verkehrsmitteln sorgen.',
+      'Arbeiten Sie im Herzschlag von ${city} und schützen Sie täglich tausende Fahrgäste vor Belästigungen und Vandalismus.'
     ]
   },
   {
@@ -68,7 +80,13 @@ module.exports = [
       'Fahren Sie hochgesicherte Spezialfahrzeuge in und um ${city}, um Werttransporte nach strikten Sicherheitsprotokollen durchzuführen.',
       'Die Werttransportbegleitung in ${city} erfordert höchste Wachsamkeit beim Abholen und Überbringen von Werten, kombiniert mit stetigem GPS-Tracking.',
       'In ${city} übernehmen Sie die Verantwortung für lückenlose Übergabeprotokolle und agieren stets in eng abgestimmten, bewaffneten Teams.',
-      'Die anspruchsvolle Routenplanung in ${city} kombiniert mit modernster Ausrüstung macht diesen Premium-Job absolut einzigartig in der Branche.'
+      'Die anspruchsvolle Routenplanung in ${city} kombiniert mit modernster Ausrüstung macht diesen Premium-Job absolut einzigartig in der Branche.',
+      'In ${city} erwartet Sie ein krisensicherer Arbeitsplatz in der Wachstumsbranche Sicherheit.',
+      'Bauen Sie Ihre Karriere in ${city} auf und profitieren Sie von unserem lokalen Netzwerk.',
+      'Werden Sie Teil eines motivierten Teams direkt am Standort ${city}.',
+      'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
+      'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
+      'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ]
   },
   {
@@ -86,7 +104,11 @@ module.exports = [
       'Mit dem Dienstfahrzeug fahren Sie in ${city} festgelegte Reviere ab und prüfen lokale Firmengelände sowie sensible Außenbereiche auf Unversehrtheit.',
       'Die Revierfahrten in ${city} zeichnen sich durch schnelle Eingreifzeiten aus – Sie reagieren flexibel auf Alarme und stellen die Ordnung vor Ort wieder her.',
       'In ${city} sind Sie mobil im Einsatz: Von der Tor- und Pfortenkontrolle im Gewerbegebiet bis zur umfassenden Alarmverfolgung im gesamten Stadtgebiet.',
-      'Ihre mobilen Streifenfahrten vernetzen verschiedene Kundenobjekte in ${city} und sorgen für eine flächendeckende, präventive Sicherheit.'
+      'Ihre mobilen Streifenfahrten vernetzen verschiedene Kundenobjekte in ${city} und sorgen für eine flächendeckende, präventive Sicherheit.',
+      'Jede Nacht sichern Sie in ${city} mehrere Standorte ab und führen gewissenhafte Kontrollfahrten in Ihrem zugewiesenen Gebiet durch.',
+      'Als mobiler Revierfahrer in ${city} sind Sie flexibel unterwegs und garantieren die Sicherheit zahlreicher mittelständischer Betriebe.',
+      'Die Routenplanung in ${city} ist abwechslungsreich und führt Sie durch alle wichtigen Industrie- und Logistikzentren der Stadt.',
+      'Ihre Präsenz in den Straßen von ${city} wirkt präventiv gegen Kriminalität und schont die Ressourcen unserer Kunden.'
     ]
   },
   {
@@ -104,7 +126,11 @@ module.exports = [
       'Sie repräsentieren moderne Bürokomplexe in ${city}: Ihre primären Aufgaben sind der professionelle Empfang, die Ausweiskontrolle und das Besuchermanagement.',
       'Als Sicherheits-Empfangskraft in ${city} besetzen Sie die Telefonzentrale, koordinieren den Zutritt und sind das absolute Aushängeschild des Gebäudes.',
       'In den Premium-Objekten in ${city} verbinden Sie exzellenten Service mit strikter Zugangskontrolle bei geregelten Tagesarbeitszeiten.',
-      'Ihr Arbeitsplatz in ${city} befindet sich in repräsentativen Firmenzentralen, wo Fremdsprachen und ein gepflegtes Auftreten im täglichen Kundenkontakt glänzen.'
+      'Ihr Arbeitsplatz in ${city} befindet sich in repräsentativen Firmenzentralen, wo Fremdsprachen und ein gepflegtes Auftreten im täglichen Kundenkontakt glänzen.',
+      'Begrüßen Sie Gäste in ${city} mit einem Lächeln, während Sie gleichzeitig die Sicherheitsrichtlinien des Hauses konsequent durchsetzen.',
+      'In ${city} agieren Sie als Vermittler zwischen Sicherheit und Service, ideal für Bewerber mit ausgeprägter Kommunikationsstärke.',
+      'Ihr Fokus in ${city} liegt auf der lückenlosen Dokumentation des Personenverkehrs und der Überwachung der Brandmeldeanlage am Empfang.',
+      'Gestalten Sie den ersten Eindruck in ${city} positiv und sorgen Sie im Hintergrund für die notwendige Sicherheit aller Mitarbeiter.'
     ]
   },
   {
@@ -122,7 +148,11 @@ module.exports = [
       'Sichern Sie die spannendsten Konzerte und Messen in ${city} ab: Ihre Aufgaben reichen von Einlasskontrollen bis zum koordinierten Ordnungsdienst.',
       'Als Teil des Event-Security-Teams in ${city} kümmern Sie sich um VIP-Betreuung, Backstage-Sicherheit und die professionelle Wegeführung der Fanströme.',
       'Das Veranstaltungsgebiet in ${city} bietet flexible Einsatzzeiten bei vielfältigen Kulturevents, Sportveranstaltungen und exklusiven Firmenabenden.',
-      'Sie gewährleisten in ${city} durch präventive Absperrungen und Deeskalation die Sicherheit tausender Besucher auf lokalen Großveranstaltungen.'
+      'Sie gewährleisten in ${city} durch präventive Absperrungen und Deeskalation die Sicherheit tausender Besucher auf lokalen Großveranstaltungen.',
+      'Erleben Sie die Atmosphäre in ${city} hautnah, während Sie unauffällig aber bestimmt für die Einhaltung der Sicherheitsregeln sorgen.',
+      'Seien Sie der Ruhepol in ${city} bei Großveranstaltungen und helfen Sie mit, unvergessliche Momente sicher durchzuführen.',
+      'Ihre Teamfähigkeit in ${city} ist gefragt, wenn es darum geht, große Crowd-Flows sicher durch das Gelände zu leiten.',
+      'In den Arenen und Stadien von ${city} sind Sie für die Einlasskontrolle und die Überwachung der Notausgänge verantwortlich.'
     ]
   },
   {
@@ -140,7 +170,11 @@ module.exports = [
       'Der Fokus in ${city} liegt auf der lückenlosen Videoüberwachung und dem professionellen Besuchermanagement an Zugangspunkten großer Industrieanlagen.',
       'Als Teil des Objektschutzes in ${city} führen Sie Schließ- und Kontrollrundgänge durch, die exakt auf die lokalen Gegebenheiten der Kunden zugeschnitten sind.',
       'Die Absicherung kritischer Unternehmenszentralen in ${city} erfordert höchste Zuverlässigkeit bei der Zutrittskontrolle von Lieferanten und Mitarbeitern.',
-      'In ${city} gewährleisten Sie die Sicherheit von Objekten im Schichtdienst, wobei die Standorte logistisch gut an das Hauptstraßennetz angeschlossen sind.'
+      'In ${city} gewährleisten Sie die Sicherheit von Objekten im Schichtdienst, wobei die Standorte logistisch gut an das Hauptstraßennetz angeschlossen sind.',
+      'Bewahren Sie Ruhe und Ordnung in ${city} – Ihr geschulter Blick erkennt Gefahrenlagen bereits in der Entstehungsphase.',
+      'Mit modernster Sicherheitstechnik ausgestattet, sichern Sie in ${city} komplexe Büro- und Fabrikareale gegen jegliche Gefahren.',
+      'In ${city} sind Sie Teil eines Sicherheitskonzeptes, das höchsten Qualitätsansprüchen und lokalen Erfordernissen gerecht wird.',
+      'Ihre professionelle Kommunikation in ${city} garantiert, dass Lieferanten und Besucher sich sicher und gut betreut fühlen.'
     ]
   },
   {
@@ -157,7 +191,13 @@ module.exports = [
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
       'Das Einsatzgebiet in ${city} erfordert höchste Zuverlässigkeit und bietet sehr gute infrastrukturelle Anbindungen.',
-      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.'
+      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.',
+      'In ${city} erwartet Sie ein krisensicherer Arbeitsplatz in der Wachstumsbranche Sicherheit.',
+      'Bauen Sie Ihre Karriere in ${city} auf und profitieren Sie von unserem lokalen Netzwerk.',
+      'Werden Sie Teil eines motivierten Teams direkt am Standort ${city}.',
+      'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
+      'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
+      'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ]
   },
   {
@@ -175,7 +215,11 @@ module.exports = [
       'In den Industrieanlagen von ${city} verantworten Sie die strenge Zutrittskontrolle, das Parkplatzmanagement sowie konsequente Fahrzeugkontrollen der Lieferanten.',
       'Der Werkschutz in ${city} verlangt Ihre Aufmerksamkeit bei Brandschutzüberwachungen und detaillierten Kontrollrundgängen auf weitläufigen Arealen.',
       'Profitieren Sie von langfristigen Perspektiven in ${city}: Im 3-Schicht-System sichern Sie kritische Produktionsstätten und dokumentieren Vorfälle bei der Schichtübergabe.',
-      'Als Teil des Werkschutzes in ${city} arbeiten Sie an hochtechnisierten Pforten und steuern den gesamten logistischen Zufluss direkt an der Werksgrenze.'
+      'Als Teil des Werkschutzes in ${city} arbeiten Sie an hochtechnisierten Pforten und steuern den gesamten logistischen Zufluss direkt an der Werksgrenze.',
+      'Schützen Sie die Innovationskraft unserer Kunden in ${city} durch professionellen Schutz vor Spionage und unbefugtem Betreten.',
+      'In ${city} sind Sie der zentrale Koordinator für Sicherheitsdienste auf großen Werksgeländen mit internationalem Publikumsverkehr.',
+      'Die Einhaltung der Unfallverhütungsvorschriften (UVV) in ${city} wird durch Ihre Kontrollen und Ihre Umsicht maßgeblich sichergestellt.',
+      'Bringen Sie Ihre Erfahrung in ${city} ein und werden Sie Teil eines qualifizierten Werkschutz-Teams in der lokalen Industrie.'
     ]
   },
   {
@@ -192,7 +236,13 @@ module.exports = [
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
       'Das Einsatzgebiet in ${city} erfordert höchste Zuverlässigkeit und bietet sehr gute infrastrukturelle Anbindungen.',
-      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.'
+      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.',
+      'In ${city} erwartet Sie ein krisensicherer Arbeitsplatz in der Wachstumsbranche Sicherheit.',
+      'Bauen Sie Ihre Karriere in ${city} auf und profitieren Sie von unserem lokalen Netzwerk.',
+      'Werden Sie Teil eines motivierten Teams direkt am Standort ${city}.',
+      'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
+      'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
+      'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ]
   },
   {
@@ -209,7 +259,13 @@ module.exports = [
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
       'Das Einsatzgebiet in ${city} erfordert höchste Zuverlässigkeit und bietet sehr gute infrastrukturelle Anbindungen.',
-      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.'
+      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.',
+      'In ${city} erwartet Sie ein krisensicherer Arbeitsplatz in der Wachstumsbranche Sicherheit.',
+      'Bauen Sie Ihre Karriere in ${city} auf und profitieren Sie von unserem lokalen Netzwerk.',
+      'Werden Sie Teil eines motivierten Teams direkt am Standort ${city}.',
+      'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
+      'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
+      'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ]
   },
   {
@@ -226,7 +282,13 @@ module.exports = [
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
       'Das Einsatzgebiet in ${city} erfordert höchste Zuverlässigkeit und bietet sehr gute infrastrukturelle Anbindungen.',
-      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.'
+      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.',
+      'In ${city} erwartet Sie ein krisensicherer Arbeitsplatz in der Wachstumsbranche Sicherheit.',
+      'Bauen Sie Ihre Karriere in ${city} auf und profitieren Sie von unserem lokalen Netzwerk.',
+      'Werden Sie Teil eines motivierten Teams direkt am Standort ${city}.',
+      'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
+      'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
+      'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ]
   },
   {
@@ -243,7 +305,13 @@ module.exports = [
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
       'Das Einsatzgebiet in ${city} erfordert höchste Zuverlässigkeit und bietet sehr gute infrastrukturelle Anbindungen.',
-      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.'
+      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.',
+      'In ${city} erwartet Sie ein krisensicherer Arbeitsplatz in der Wachstumsbranche Sicherheit.',
+      'Bauen Sie Ihre Karriere in ${city} auf und profitieren Sie von unserem lokalen Netzwerk.',
+      'Werden Sie Teil eines motivierten Teams direkt am Standort ${city}.',
+      'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
+      'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
+      'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ]
   },
   {
@@ -260,7 +328,13 @@ module.exports = [
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
       'Das Einsatzgebiet in ${city} erfordert höchste Zuverlässigkeit und bietet sehr gute infrastrukturelle Anbindungen.',
-      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.'
+      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.',
+      'In ${city} erwartet Sie ein krisensicherer Arbeitsplatz in der Wachstumsbranche Sicherheit.',
+      'Bauen Sie Ihre Karriere in ${city} auf und profitieren Sie von unserem lokalen Netzwerk.',
+      'Werden Sie Teil eines motivierten Teams direkt am Standort ${city}.',
+      'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
+      'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
+      'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ]
   },
   {
@@ -277,7 +351,13 @@ module.exports = [
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
       'Das Einsatzgebiet in ${city} erfordert höchste Zuverlässigkeit und bietet sehr gute infrastrukturelle Anbindungen.',
-      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.'
+      'Als Teil unseres Teams in ${city} gewährleisten Sie die Sicherheit von Objekten und Personen direkt vor Ort.',
+      'In ${city} erwartet Sie ein krisensicherer Arbeitsplatz in der Wachstumsbranche Sicherheit.',
+      'Bauen Sie Ihre Karriere in ${city} auf und profitieren Sie von unserem lokalen Netzwerk.',
+      'Werden Sie Teil eines motivierten Teams direkt am Standort ${city}.',
+      'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
+      'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
+      'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ]
   }
 ];
