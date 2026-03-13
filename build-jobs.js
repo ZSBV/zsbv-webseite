@@ -112,9 +112,21 @@ function generateAllJobs(template) {
         `Werden Sie Teil unseres Sicherheits-Teams in ${city.name}!`,
         `Hier ist Ihre Chance: Neuer Job als ${tmpl.title} in ${city.name}.`,
         `Spannende Herausforderung in ${city.name} gesucht? Werden Sie ${tmpl.title}!`,
-        `Direktstart in ${city.name}: Wir suchen ab sofort ${tmpl.title}.`
+        `Direktstart in ${city.name}: Wir suchen ab sofort ${tmpl.title}.`,
+        `Sicherer Arbeitsplatz in ${city.name}: Bewerben Sie sich als ${tmpl.title}.`,
+        `Karriere-Check in ${city.name}: Wir suchen Verstärkung als ${tmpl.title}.`,
+        `Lust auf Sicherheit? Starten Sie als ${tmpl.title} in ${city.name}.`
       ];
       const randomIntro = introVariations[Math.floor(Math.random() * introVariations.length)];
+
+      const outroVariations = [
+        `Wir freuen uns auf Ihre Bewerbung für den Standort ${city.name}!`,
+        `Nutzen Sie Ihre Chance in ${city.name} und bewerben Sie sich noch heute.`,
+        `Ihr neuer Job in ${city.name} ist nur einen Klick entfernt.`,
+        `Starten Sie jetzt Ihre Karriere bei uns in ${city.name}.`,
+        `Werden Sie Teil der Erfolgsgeschichte in ${city.name}.`
+      ];
+      const randomOutro = outroVariations[Math.floor(Math.random() * outroVariations.length)];
 
       // Construct a unique overall description
       const fullCustomDescription = `
@@ -123,6 +135,8 @@ function generateAllJobs(template) {
         ${randomLocalContext} 
         
         ${tmpl.beschreibung}
+
+        ${randomOutro}
       `.trim();
 
       // Google for Jobs JSON-LD
@@ -490,6 +504,9 @@ function generateIndeedFeed(jobs) {
       Vergütung:
       ${job.salary} € Brutto/Monat plus eventuelle Zulagen.
 
+      Lage & Bewerbung:
+      ${job.randomOutro}
+
       Hinweis zur Stellenvermittlung:
       ${VERMITTLUNGSHINWEIS}
     `.trim();
@@ -543,6 +560,8 @@ function generateTalentFeed(jobs) {
       <ul>
         ${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}
       </ul>
+
+      <p>${esc(job.randomOutro)}</p>
 
       <p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>
     `.trim();
