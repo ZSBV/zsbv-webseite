@@ -280,21 +280,21 @@ function generateAllJobs(template) {
             </div>`;
 
       let html = template
-        .replace(/{{TITLE}}/g, esc(tmpl.title))
+        .replace(/{{TITLE}}/g, esc(randomTitle))
         .replace(/{{LOCATION}}/g, esc(city.name))
+        .replace(/{{DATE_POSTED}}/g, esc(today))
+        .replace(/{{EMPLOYMENT}}/g, esc('Vollzeit'))
         .replace(/{{SALARY}}/g, esc(salary))
+        .replace(/{{DESCRIPTION}}/g, esc(fullCustomDescription))
+        .replace(/{{LOCAL_CONTEXT}}/g, localContextHtml)
+        .replace(/{{TASKS_LIST}}/g, taskList.map(t => `<li>${esc(t)}</li>`).join(''))
+        .replace(/{{REQUIREMENTS_LIST}}/g, reqList.map(r => `<li>${esc(r)}</li>`).join(''))
+        .replace(/{{BENEFITS_LIST}}/g, benefitList.map(b => `<li>${esc(b)}</li>`).join(''))
         .replace(/{{BADGE}}/g, esc(tmpl.badge))
         .replace(/{{BADGE_CLASS}}/g, esc(tmpl.badgeClass))
-        .replace(/{{DESCRIPTION}}/g, esc(fullCustomDescription))
-        .replace(/{{EMPLOYMENT}}/g, esc(tmpl.employment))
-        .replace(/{{DATE_POSTED}}/g, esc(today))
-        .replace(/{{JOB_URL}}/g, jobUrl)
-        .replace(/{{JSON_LD}}/g, JSON.stringify(jsonLd, null, 2))
-        .replace(/{{TASKS_LIST}}/g, taskList.map(t => `<li>${esc(t)}</li>`).join('\n                        '))
-        .replace(/{{REQUIREMENTS_LIST}}/g, reqList.map(r => `<li>${esc(r)}</li>`).join('\n                        '))
-        .replace(/{{BENEFITS_LIST}}/g, benefitList.map(b => `<li>${esc(b)}</li>`).join('\n                        '))
+        .replace(/{{JSON_LD}}/g, JSON.stringify(jsonLd))
+        .replace(/{{IMAGE_PATH}}/g, esc(tmpl.image || 'images/jobs/01-objektschutz.png'))
         .replace(/{{META_DESCRIPTION}}/g, esc(tmpl.seoDescription.replace(/\{\{LOCATION\}\}/g, city.name)))
-        .replace(/{{LOCAL_CONTEXT}}/g, localContextHtml)
         .replace(/{{INTERNAL_LINKS}}/g, internalLinksHtml);
 
       jobs.push({ 
