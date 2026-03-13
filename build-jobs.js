@@ -66,6 +66,17 @@ function esc(str) {
     .replace(/"/g, '&quot;');
 }
 
+/**
+ * Shuffles array in place.
+ */
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 // ============================================================
 // GENERATE ALL JOB PAGES
 // ============================================================
@@ -83,26 +94,48 @@ function generateAllJobs(template) {
       const slug = slugify(`${tmpl.title}-${city.name}`);
       const jobUrl = `${SITE_URL}/jobs/${slug}.html`;
 
-      const taskList = tmpl.aufgaben.split(';').map(t => t.trim()).filter(Boolean);
-      const reqList = tmpl.anforderungen.split(';').map(t => t.trim()).filter(Boolean);
-      const benefitList = tmpl.vorteile.split(';').map(t => t.trim()).filter(Boolean);
+      // Randomize order of lists for uniqueness
+      const taskList = shuffle(tmpl.aufgaben.split(';').map(t => t.trim()).filter(Boolean));
+      const reqList = shuffle(tmpl.anforderungen.split(';').map(t => t.trim()).filter(Boolean));
+      const benefitList = shuffle(tmpl.vorteile.split(';').map(t => t.trim()).filter(Boolean));
 
       const salary = `${tmpl.salaryMin.toLocaleString('de-DE')} – ${tmpl.salaryMax.toLocaleString('de-DE')}`;
 
+      // Pick a random local context
       const ctxArr = tmpl.localContexts || ["In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld."];
-      const randomTmpl = ctxArr[Math.floor(Math.random() * ctxArr.length)];
-      const localContextHtml = `<strong>Besonderheiten für ${city.name}:</strong> ${randomTmpl.replace(/\$\{city\}/g, city.name)}`;
+      const randomLocalContext = ctxArr[Math.floor(Math.random() * ctxArr.length)].replace(/\$\{city\}/g, city.name);
+      
+      const localContextHtml = `<strong>Besonderheiten für ${city.name}:</strong> ${randomLocalContext}`;
+
+      // Variations for the intro to avoid duplicate detection
+      const introVariations = [
+        `Werden Sie Teil unseres Sicherheits-Teams in ${city.name}!`,
+        `Hier ist Ihre Chance: Neuer Job als ${tmpl.title} in ${city.name}.`,
+        `Spannende Herausforderung in ${city.name} gesucht? Werden Sie ${tmpl.title}!`,
+        `Direktstart in ${city.name}: Wir suchen ab sofort ${tmpl.title}.`
+      ];
+      const randomIntro = introVariations[Math.floor(Math.random() * introVariations.length)];
+
+      // Construct a unique overall description
+      const fullCustomDescription = `
+        ${randomIntro} 
+        
+        ${randomLocalContext} 
+        
+        ${tmpl.beschreibung}
+      `.trim();
 
       // Google for Jobs JSON-LD
       const jsonLd = {
         "@context": "https://schema.org",
         "@type": "JobPosting",
         "title": tmpl.title,
-        "description": `<p>${esc(tmpl.title)} in ${esc(city.name)}. ${esc(tmpl.beschreibung)}</p>` +
-          `<h3>Aufgaben</h3><ul>${taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` +
-          `<h3>Anforderungen</h3><ul>${reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` +
-          `<h3>Vorteile</h3><ul>${benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` +
-          `<p>${localContextHtml}</p>` +
+        "description": `<p><strong>${esc(randomIntro)}</strong></p>` +
+          `<p>${esc(randomLocalContext)}</p>` +
+          `<p>${esc(tmpl.beschreibung)}</p>` +
+          `<h3>Ihre Aufgaben</h3><ul>${taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` +
+          `<h3>Das bringen Sie mit</h3><ul>${reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` +
+          `<h3>Ihre Vorteile bei uns</h3><ul>${benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` +
           `<p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>`,
         "identifier": {
           "@type": "PropertyValue",
@@ -143,13 +176,10 @@ function generateAllJobs(template) {
         "directApply": true
       };
 
-      // Fill template
-      const fullDescription = `${tmpl.beschreibung}\n\n${VERMITTLUNGSHINWEIS}`;
-
+      // Fill template for the HTML page
       // --------------------------------------------------------
       // INTERNAL LINKING (Link-Juice)
       // --------------------------------------------------------
-      // Select 3 random different jobs for the SAME city
       const otherJobsInCity = JOB_TEMPLATES.filter(otherTmpl => otherTmpl.title !== tmpl.title);
       const shuffled = otherJobsInCity.sort(() => 0.5 - Math.random());
       const selected = shuffled.slice(0, 3);
@@ -182,7 +212,7 @@ function generateAllJobs(template) {
         .replace(/{{SALARY}}/g, esc(salary))
         .replace(/{{BADGE}}/g, esc(tmpl.badge))
         .replace(/{{BADGE_CLASS}}/g, esc(tmpl.badgeClass))
-        .replace(/{{DESCRIPTION}}/g, esc(fullDescription))
+        .replace(/{{DESCRIPTION}}/g, esc(fullCustomDescription))
         .replace(/{{EMPLOYMENT}}/g, esc(tmpl.employment))
         .replace(/{{DATE_POSTED}}/g, esc(today))
         .replace(/{{JOB_URL}}/g, jobUrl)
@@ -194,7 +224,23 @@ function generateAllJobs(template) {
         .replace(/{{LOCAL_CONTEXT}}/g, localContextHtml)
         .replace(/{{INTERNAL_LINKS}}/g, internalLinksHtml);
 
-      jobs.push({ slug, html, title: tmpl.title, location: city.name, region: city.region, salary, jobUrl, datePosted: today, validThrough, description: tmpl.beschreibung, taskList });
+      jobs.push({ 
+        slug, 
+        html, 
+        title: tmpl.title, 
+        location: city.name, 
+        region: city.region, 
+        salary, 
+        jobUrl, 
+        datePosted: today, 
+        validThrough, 
+        description: fullCustomDescription, 
+        taskList,
+        reqList,
+        benefitList,
+        randomIntro,
+        randomLocalContext
+      });
     }
   }
 
@@ -426,17 +472,25 @@ function generateIndeedFeed(jobs) {
   <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n`;
   for (const job of jobs) {
     const fullDescription = `
-      Stellenangebot: ${job.title} in ${job.location}
+      ${job.randomIntro}
+      
+      ${job.randomLocalContext}
 
-      ${job.description}
+      Stellenangebot: ${job.title} in ${job.location}
 
       Ihre Aufgaben im Detail:
       - ${job.taskList.join('\n      - ')}
 
+      Das bringen Sie mit:
+      - ${job.reqList.join('\n      - ')}
+
+      Vorteile bei uns:
+      - ${job.benefitList.join('\n      - ')}
+
       Vergütung:
       ${job.salary} € Brutto/Monat plus eventuelle Zulagen.
 
-      Über uns:
+      Hinweis zur Stellenvermittlung:
       ${VERMITTLUNGSHINWEIS}
     `.trim();
 
@@ -471,12 +525,25 @@ function generateTalentFeed(jobs) {
     const tmpl = JOB_TEMPLATES.find(t => t.title === job.title);
     
     const htmlDescription = `
-      <p><strong>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</strong></p>
-      <p>${esc(job.description)}</p>
+      <p><strong>${esc(job.randomIntro)}</strong></p>
+      <p>${esc(job.randomLocalContext)}</p>
+      <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
+      
       <h3>Ihre Aufgaben:</h3>
       <ul>
         ${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}
       </ul>
+
+      <h3>Anforderungen:</h3>
+      <ul>
+        ${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}
+      </ul>
+
+      <h3>Ihre Vorteile:</h3>
+      <ul>
+        ${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}
+      </ul>
+
       <p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>
     `.trim();
 
