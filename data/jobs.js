@@ -5,10 +5,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2620,
     salaryMax: 2850,
-    aufgaben: 'Objekt- & Werkschutz; Kontrollrundgänge; Dokumentation; Alarmverfolgung',
-    anforderungen: 'Zuverlässigkeit; Deutsch-Grundkenntnisse; Einwandfreies Führungszeugnis',
-    vorteile: 'Kostenlose Qualifizierung; Unbefristeter Arbeitsvertrag; Job-Garantie',
-    beschreibung: 'In der Rolle als Wachschutzmitarbeiter sind Sie das Rückgrat der Sicherheit für unsere Kunden. Sie schützen Industrieanlagen, Gewerbeobjekte und sensible Areale vor unbefugtem Zugriff, Vandalismus und Brandschäden. Durch Ihre regelmäßigen Kontrollgänge und die professionelle Alarmverfolgung gewährleisten Sie einen reibungslosen Betriebsablauf.',
+    aufgaben: 'Objektbewachung und Werkschutz; Regelmäßige Kontrollgänge (Bestreifung); Dokumentation von Vorkommnissen; Alarmverfolgung und Einleitung von Sofortmaßnahmen; Überprüfung von Verschlusszuständen; Bedienung von Überwachungstechnik',
+    anforderungen: 'Quereinstieg absolut erwünscht (wir schulen Sie); Sachkunde nach §34a GewO (inklusive Schulung); Physische Fitness für Kontrollgänge; Sorgfältige Arbeitsweise; Verantwortungsbewusstsein; Deutschkenntnisse (B1)',
+    vorteile: 'Übernahme aller Ausbildungskosten; Krisensicherer Arbeitsplatz; Pünktliche und tarifgerechte Bezahlung; Zuschläge für Nachtarbeit und Feiertage; Unterstützung beim Bildungsgutschein; Aufstiegsmöglichkeiten zum Schichtleiter',
+    beschreibung: 'Werden Sie zum Schutzschild für Industrie und Gewerbe. Als Wachschutzmitarbeiter sichern Sie Areale ab, die für die Wirtschaft entscheidend sind. Auch ohne Erfahrung sind Sie willkommen – wir machen Sie fit für den Einsatz. Ein Job mit Verantwortung, klaren Strukturen und langfristiger Perspektive.',
     seoDescription: 'Job als Wachschutzmitarbeiter in {{LOCATION}}. Jetzt bewerben!',
     localContexts: [
       'Als Wachschutzmitarbeiter in ${city} patrouillieren Sie primär bei Tag und Nacht durch lokale Industrie- und Gewerbegebiete, um maximale Prävention zu gewährleisten.',
@@ -19,7 +19,8 @@ module.exports = [
       'Übernehmen Sie in ${city} die Verantwortung für den Objektschutz und reagieren Sie kompetent auf alle Sicherheitsvorfälle.',
       'Ihre Tätigkeit in ${city} umfasst die lückenlose Überwachung von Außenanlagen und die Sicherstellung der Verschlussordnung.',
       'Werden Sie im Wachschutz in ${city} aktiv und tragen Sie maßgeblich zum Schutz lokaler Infrastrukturen bei.'
-    ]
+    ],
+    image: 'images/jobs/14-wachschutz-nachtschicht.png'
   },
   {
     title: 'Sicherheitsmitarbeiter (m/w/d)',
@@ -27,10 +28,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2620,
     salaryMax: 2850,
-    aufgaben: 'Zutrittskontrolle & Empfang; Objekt- & Werkschutz; Kontrollrundgänge & Dokumentation; Alarmverfolgung & Intervention',
-    anforderungen: 'Kein Vorwissen erforderlich; §34a Qualifizierung inklusive; Deutsch mind. B1; Einwandfreies Führungszeugnis',
-    vorteile: 'Kostenlose §34a Qualifizierung; Unbefristeter Arbeitsvertrag; Bildungsgutschein möglich; Vermittlung nach Kursabschluss',
-    beschreibung: 'Als Sicherheitsmitarbeiter sind Sie die erste Anlaufstelle für Sicherheit und Service. Sie verbinden klassische Schutzaufgaben mit einem hohen Maß an Kundenorientierung. Ob am Empfang, bei der Zutrittskontrolle oder im Objektschutz – Sie behalten stets den Überblick und agieren souverän in jeder Situation.',
+    aufgaben: 'Zutrittskontrollen und Besucherempfang; Objektschutz und Werkschutz; Kontrollrundgänge mit Dokumentation; Überwachung von Sicherheitseinrichtungen; Alarmverfolgung und Intervention; Durchsetzung der Hausordnung',
+    anforderungen: 'Kein Vorwissen nötig – wir bilden Sie aus; Deutschkenntnisse in Wort und Schrift; Einwandfreies polizeiliches Führungszeugnis; Zuverlässigkeit und Pünktlichkeit; Freundliches und bestimmtes Auftreten; Bereitschaft zum Schichtdienst',
+    vorteile: 'Kostenlose Ausbildung zum §34a Profi; Unbefristeter Arbeitsvertrag ab Tag 1; Attraktive Schichtzulagen (Nacht/Feiertag); Job-Garantie in Ihrer Region; Moderne Dienstkleidung kostenfrei; Professionelle Einarbeitung vor Ort',
+    beschreibung: 'Als Sicherheitsmitarbeiter sind Sie das Aushängeschild unserer Kunden. Wir suchen insbesondere Quereinsteiger, die Lust auf eine neue Herausforderung haben. Wir bilden Sie kostenlos aus und vermitteln Sie direkt in einen sicheren Job. Sie verbinden klassische Schutzaufgaben mit einem hohen Maß an Kundenorientierung und sorgen für ein sicheres Umfeld.',
     seoDescription: 'Gesucht: Sicherheitsmitarbeiter (m/w/d) in {{LOCATION}}. Starten Sie mit unserer kostenlosen §34a Schulung inkl. direkter Vermittlung. Auch für Quereinsteiger!',
     localContexts: [
       'In ${city} übernehmen Sie vielseitige Schutzaufgaben, von der Zutrittskontrolle bis zu regelmäßigen Kontrollrundgängen bei lokalen Unternehmen.',
@@ -41,7 +42,8 @@ module.exports = [
       'In ${city} sind Sie verantwortlich für die Aufrechterhaltung der Sicherheit und Ordnung in stark frequentierten Objekten.',
       'Arbeiten Sie in ${city} an vorderster Front und schützen Sie Sachwerte sowie Personen durch Ihre aufmerksame Präsenz.',
       'Das moderne Arbeitsumfeld in ${city} erfordert Zuverlässigkeit und ein Auge fürs Detail bei allen Kontrolltätigkeiten.'
-    ]
+    ],
+    image: 'images/jobs/01-objektschutz.png'
   },
   {
     title: 'ÖPNV-Sicherheitskraft (m/w/d)',
@@ -49,10 +51,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2850,
     salaryMax: 3200,
-    aufgaben: 'Sreife in Bussen und Bahnen; Deeskalation; Fahrgastbetreuung',
-    anforderungen: 'Sachkunde §34a; Belastbarkeit; Schichtbereitschaft',
-    vorteile: 'Höheres Gehalt; Zuschläge; Sicherer Arbeitsplatz',
-    beschreibung: 'Sorgen Sie für ein sicheres Gefühl in Bus und Bahn. Als Sicherheitskraft im öffentlichen Personennahverkehr sind Sie präsent, hilfsbereit und durchsetzungsstark. Sie deeskalieren Konflikte, unterstützen Fahrgäste und schützen die Infrastruktur unserer Partnerbetriebe vor Vandalismus.',
+    aufgaben: 'Präsenzstreife in Bussen und Bahnen; Deeskalation bei Konflikten; Hilfestellung für Fahrgäste; Durchsetzung der Beförderungsbedingungen; Überwachung der Bahnhöfe; Zusammenarbeit mit der Polizei',
+    anforderungen: 'Hohe Belastbarkeit und Deeskalationsfähigkeit; Sicheres Auftreten in der Öffentlichkeit; Deutschkenntnisse fließend; Führungszeugnis ohne Einträge; Bereitschaft zur Schichtarbeit; Sachkunde §34a erforderlich (Schulung möglich)',
+    vorteile: 'Überdurchschnittliche Vergütung; Umfassendes Deeskalationstraining; Kostenloses Job-Ticket; Sicherer Arbeitsplatz im öffentlichen Dienst; Hochwertige Ausrüstung; Starke Teamgemeinschaft',
+    beschreibung: 'Sorgen Sie für Ordnung und ein sicheres Gefühl im Nahverkehr. Als ÖPNV-Sicherheitskraft sind Sie direkt am Puls der Stadt. Wir suchen kommunikative Menschen, die auch in stressigen Situationen einen kühlen Kopf bewahren. Quereinsteiger profitieren von unseren intensiven Schulungen.',
     seoDescription: 'ÖPNV-Sicherheitskraft in {{LOCATION}} gesucht. Jetzt informieren!',
     localContexts: [
       'In den Bussen, Bahnen und an den Bahnhöfen von ${city} sorgen Sie als präsente Sicherheitskraft für das Wohlgefühl und den Schutz aller Fahrgäste.',
@@ -63,7 +65,8 @@ module.exports = [
       'In den Bahnhöfen von ${city} sind Sie der Garant für Sicherheit und stehen Reisenden bei Fragen kompetent zur Seite.',
       'Die Sicherheit der Pendler in ${city} steht an erster Stelle, während Sie im Team für Ordnung in allen Verkehrsmitteln sorgen.',
       'Arbeiten Sie im Herzschlag von ${city} und schützen Sie täglich tausende Fahrgäste vor Belästigungen und Vandalismus.'
-    ]
+    ],
+    image: 'images/jobs/10-bahnsicherheit.png'
   },
   {
     title: 'Geld- & Werttransportfahrer/-in (m/w/d)',
@@ -71,10 +74,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 3200,
     salaryMax: 3800,
-    aufgaben: 'Sicherer Transport von Werten; Dokumentation; Teamarbeit',
-    anforderungen: 'Waffensachkunde; Führerschein Kl. B; Zuverlässigkeit',
-    vorteile: 'Top Gehalt; Spezialausbildung; Verantwortung',
-    beschreibung: 'Übernehmen Sie eine der verantwortungsvollsten Positionen in der Branche. Als Teil eines hochspezialisierten Teams transportieren Sie Werte unter Einhaltung strengster Sicherheitsprotokolle. Höchste Wachsamkeit, Zuverlässigkeit und technisches Verständnis sind hier Ihre wichtigsten Werkzeuge.',
+    aufgaben: 'Sicherer Transport von Bargeld und Werten; Bestückung von Geldautomaten; Dokumentation der Übergaben; Einhaltung strenger Sicherheitsprotokolle; Überwachung des Umfelds während der Stopps; Fahrzeugpflege und Kontrolle',
+    anforderungen: 'Waffensachkunde nach §7 WaffG (Schulung möglich); Führerschein der Klasse B (mind. 2 Jahre); Absolute Diskretion und Zuverlässigkeit; Körperliche Belastbarkeit; Gepflegtes Erscheinungsbild; Einwandfreie Schufa-Auskunft',
+    vorteile: 'Spezialisierte Ausbildung; Attraktives Gehaltspaket; Hohe Verantwortung; Modernste Sicherheitstechnik; Arbeit in festen Zweier-Teams; Krisensicherer Arbeitsplatz',
+    beschreibung: 'Übernehmen Sie eine der exklusivsten Positionen der Branche. Im Geld- und Werttransport arbeiten Sie hochkonzentriert und nach strengsten Regeln. Wir suchen zuverlässige Fahrer, die Verantwortung übernehmen wollen. Quereinsteiger werden durch unsere Fachkurse perfekt vorbereitet.',
     seoDescription: 'Job im Geld- und Werttransport in {{LOCATION}}. Werden Sie Teil des Teams!',
     localContexts: [
       'Fahren Sie hochgesicherte Spezialfahrzeuge in und um ${city}, um Werttransporte nach strikten Sicherheitsprotokollen durchzuführen.',
@@ -87,7 +90,8 @@ module.exports = [
       'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
-    ]
+    ],
+    image: 'images/jobs/15-revierdienst.png'
   },
   {
     title: 'Revierwachmann/-frau (m/w/d)',
@@ -95,10 +99,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2770,
     salaryMax: 3030,
-    aufgaben: 'Revierfahrten; Verschlusskontrollen; Alarmverfolgung',
-    anforderungen: 'Führerschein; §34a Sachkunde; Pünktlichkeit',
-    vorteile: 'Dienstwagen; Eigenverantwortung; Abwechslung',
-    beschreibung: 'Sorgen Sie für Sicherheit auf Achse. Im Revierdienst prüfen Sie nacheinander verschiedene Kundenobjekte, führen Verschlusskontrollen durch und reagieren blitzschnell auf Alarme. Ein abwechslungsreicher Job für mobile Profis, die gerne eigenverantwortlich arbeiten.',
+    aufgaben: 'Durchführung von Revier- und Streifenfahrten; Verschlusskontrollen bei Industrieobjekten; Schnelle Alarmverfolgung und -bearbeitung; Aufrechterhaltung der Sicherheit im Revier; Schriftliche Dokumentation; Bedienung von Funktechnik',
+    anforderungen: 'Führerschein Klasse B zwingend; Sachkunde §34a GewO; Zuverlässigkeit und Gewissenhaftigkeit; Deutschkenntnisse; Bereitschaft zur Nachtarbeit; Sorgfältiger Umgang mit Dienstwagen',
+    vorteile: 'Dienstfahrzeug für die Dauer der Schicht; Modernste mobile Kommunikation; Eigenverantwortliches Arbeiten; Hohe Zuschläge für Nachtarbeit; Krisensichere Anstellung; Umfassende Einarbeitung',
+    beschreibung: 'Sorgen Sie für Sicherheit auf Achse. Im Revierdienst sind Sie der mobile Wächter über das Stadtgebiet. Wir suchen profilierte Autofahrer, die gerne eigenständig unterwegs sind. Auch für Quereinsteiger ein spannender Weg in die Sicherheitsbranche mit viel Abwechslung.',
     seoDescription: 'Revierwachmann in {{LOCATION}} werden. Jetzt bewerben!',
     localContexts: [
       'Mit dem Dienstfahrzeug fahren Sie in ${city} festgelegte Reviere ab und prüfen lokale Firmengelände sowie sensible Außenbereiche auf Unversehrtheit.',
@@ -109,7 +113,8 @@ module.exports = [
       'Als mobiler Revierfahrer in ${city} sind Sie flexibel unterwegs und garantieren die Sicherheit zahlreicher mittelständischer Betriebe.',
       'Die Routenplanung in ${city} ist abwechslungsreich und führt Sie durch alle wichtigen Industrie- und Logistikzentren der Stadt.',
       'Ihre Präsenz in den Straßen von ${city} wirkt präventiv gegen Kriminalität und schont die Ressourcen unserer Kunden.'
-    ]
+    ],
+    image: 'images/jobs/15-revierdienst.png'
   },
   {
     title: 'Empfangskraft Sicherheit (m/w/d)',
@@ -117,10 +122,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2680,
     salaryMax: 3100,
-    aufgaben: 'Telefondienst; Besuchermanagement; Schlüsselausgabe',
-    anforderungen: 'Gepflegtes Auftreten; Deutsch fließend; Zuverlässigkeit',
-    vorteile: 'Geregelte Arbeitszeiten; Moderner Arbeitsplatz; Langfristigkeit',
-    beschreibung: 'Sie sind die Visitenkarte unserer Kunden. In dieser Position verbinden Sie professionelles Auftreten mit sicherheitstechnischem Know-how. Sie koordinieren den Besucherverkehr, bedienen die Telefonzentrale und behalten die Sicherheitssysteme im Auge – ideal für serviceorientierte Persönlichkeiten.',
+    aufgaben: 'Professioneller Besucherempfang und Anmeldung; Telefonvermittlung und Auskunftsersatz; Schlüsselmanagement und Ausweiskontrolle; Überwachung der EMA und BMA; Koordination von Lieferanten; Administrative Unterstützung der Sicherheit',
+    anforderungen: 'Gepflegtes und professionelles Auftreten; Sehr gute Deutschkenntnisse; Grundkenntnisse in Englisch von Vorteil; Freundliche und serviceorientierte Art; Zuverlässigkeit und Diskretion; §34a Sachkunde (Schulung möglich)',
+    vorteile: 'Angenehmes Arbeitsumfeld in modernen Bürokomplexen; Geregelte Arbeitszeiten (Mo-Fr möglich); Attraktive Vergütung; Weiterbildung im Kundenservice; Kostenlose Dienstbekleidung; Langfristige Zusammenarbeit',
+    beschreibung: 'Sie sind die Visitenkarte unserer Kunden und verbinden Service mit Sicherheit. Als Empfangskraft im Sicherheitsdienst sind Sie die zentrale Anlaufstelle. Quereinsteiger aus Hotellerie oder Gastronomie sind bei uns besonders gern gesehen, da Sie den Service-Gedanken bereits mitbringen.',
     seoDescription: 'Sicherheits-Empfangskraft in {{LOCATION}} gesucht. Attraktive Bedingungen!',
     localContexts: [
       'Sie repräsentieren moderne Bürokomplexe in ${city}: Ihre primären Aufgaben sind der professionelle Empfang, die Ausweiskontrolle und das Besuchermanagement.',
@@ -131,7 +136,8 @@ module.exports = [
       'In ${city} agieren Sie als Vermittler zwischen Sicherheit und Service, ideal für Bewerber mit ausgeprägter Kommunikationsstärke.',
       'Ihr Fokus in ${city} liegt auf der lückenlosen Dokumentation des Personenverkehrs und der Überwachung der Brandmeldeanlage am Empfang.',
       'Gestalten Sie den ersten Eindruck in ${city} positiv und sorgen Sie im Hintergrund für die notwendige Sicherheit aller Mitarbeiter.'
-    ]
+    ],
+    image: 'images/jobs/07-empfangsdienst.png'
   },
   {
     title: 'Veranstaltungsschutz (m/w/d)',
@@ -139,10 +145,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2500,
     salaryMax: 2770,
-    aufgaben: 'Einlasskontrolle; Ordnungstätigkeiten; VIP-Betreuung',
-    anforderungen: 'Teamfähigkeit; Belastbarkeit; Freundliches Auftreten',
-    vorteile: 'Flexible Zeiten; Spannende Events; Nettes Team',
-    beschreibung: 'Seien Sie mittendrin bei den größten Events der Region. Vom Einlassmanagement bis zur VIP-Betreuung sorgen Sie dafür, dass Besucher sicher feiern können. Flexibilität, Teamgeist und ein freundliches, aber bestimmtes Auftreten zeichnen Sie aus.',
+    aufgaben: 'Einlass- und Ticketkontrolle; Ordnerdienste bei Events; VIP-Betreuung und Sicherung; Deeskalation bei Menschenansammlungen; Erste Hilfe und Evakuierungshilfe; Geländeüberwachung',
+    anforderungen: 'Teamfähigkeit und Belastbarkeit; Gepflegtes, freundliches Erscheinen; Deutschkenntnisse; Sachkunde §34a (Schulung möglich); Flexibilität am Wochenende; Sauberes Führungszeugnis',
+    vorteile: 'Einzigartige Einblicke bei Konzerten und Sport; Flexibles Arbeiten nach Absprache; Attraktive Nacht- und Sonntagszuschläge; Arbeiten in einem coolen Team; Kostenlose Fachschulungen; Aufstieg zum Teamleiter möglich',
+    beschreibung: 'Machen Sie Events sicher und unvergesslich. Im Veranstaltungsschutz arbeiten Sie dort, wo andere feiern. Wir suchen motivierte Teamsplayer, die gerne unter Menschen sind. Quereinsteiger sind bei uns herzlich willkommen und werden Schritt für Schritt herangeführt.',
     seoDescription: 'Arbeiten im Veranstaltungsschutz in {{LOCATION}}. Sei dabei!',
     localContexts: [
       'Sichern Sie die spannendsten Konzerte und Messen in ${city} ab: Ihre Aufgaben reichen von Einlasskontrollen bis zum koordinierten Ordnungsdienst.',
@@ -153,7 +159,8 @@ module.exports = [
       'Seien Sie der Ruhepol in ${city} bei Großveranstaltungen und helfen Sie mit, unvergessliche Momente sicher durchzuführen.',
       'Ihre Teamfähigkeit in ${city} ist gefragt, wenn es darum geht, große Crowd-Flows sicher durch das Gelände zu leiten.',
       'In den Arenen und Stadien von ${city} sind Sie für die Einlasskontrolle und die Überwachung der Notausgänge verantwortlich.'
-    ]
+    ],
+    image: 'images/jobs/06-veranstaltungsschutz.png'
   },
   {
     title: 'Objektschutzmitarbeiter (m/w/d)',
@@ -161,10 +168,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2620,
     salaryMax: 2850,
-    aufgaben: 'Objektüberwachung; Zutrittskontrolle; Dokumentation',
-    anforderungen: 'Sachkunde §34a; Deutschkenntnisse; Zuverlässigkeit',
-    vorteile: 'Sicherer Job; Nachtzuschläge; Kurze Wege',
-    beschreibung: 'Sichern Sie die Werte unserer Kunden direkt vor Ort. Im Objektschutz überwachen Sie Betriebsgelände, steuern den Zutritt von Lieferanten und Personal und dokumentieren alle Vorkommnisse lückenlos. Ein krisensicherer Arbeitsplatz mit klaren Strukturen.',
+    aufgaben: 'Überwachung von Gewerbe- und Industrieobjekten; Zutrittskontrollen für Personal und Lieferanten; Regelmäßige Kontrollstreifen auf dem Gelände; Bedienung der Videoüberwachungsanlage (VSt); Einleitung von Maßnahmen bei Vorfällen; Erstellung von Protokollen',
+    anforderungen: 'Sachkunde nach §34a GewO; Deutschkenntnisse; Zuverlässigkeit und Pünktlichkeit; Teamfähigkeit; Belastbarkeit; Bereitschaft zum Schichtdienst',
+    vorteile: 'Sicherer Arbeitsplatz in Festanstellung; Nacht-, Sonntags- und Feiertagszuschläge; Kurze Arbeitswege; Kostenlose Ausbildung bei Bedarf; Moderne Ausrüstung; Aufstiegsmöglichkeiten',
+    beschreibung: 'Schützen Sie, was wichtig ist. Im Objektschutz sichern Sie Firmengelände direkt vor Ort ab. Wir bieten Ihnen einen stabilen Job mit klaren Abläufen. Quereinsteiger sind willkommen – wir unterstützen Sie beim Erwerb aller notwendigen Qualifikationen für einen schnellen Start.',
     seoDescription: 'Objektschutz-Jobs in {{LOCATION}}. Quereinstieg möglich!',
     localContexts: [
       'Der Fokus in ${city} liegt auf der lückenlosen Videoüberwachung und dem professionellen Besuchermanagement an Zugangspunkten großer Industrieanlagen.',
@@ -175,7 +182,8 @@ module.exports = [
       'Mit modernster Sicherheitstechnik ausgestattet, sichern Sie in ${city} komplexe Büro- und Fabrikareale gegen jegliche Gefahren.',
       'In ${city} sind Sie Teil eines Sicherheitskonzeptes, das höchsten Qualitätsansprüchen und lokalen Erfordernissen gerecht wird.',
       'Ihre professionelle Kommunikation in ${city} garantiert, dass Lieferanten und Besucher sich sicher und gut betreut fühlen.'
-    ]
+    ],
+    image: 'images/jobs/01-objektschutz.png'
   },
   {
     title: 'Personenschützer/-in (m/w/d)',
@@ -183,10 +191,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 3200,
     salaryMax: 3800,
-    aufgaben: 'Begleitschutz; Gefahrenanalyse; Voraufklärung',
-    anforderungen: 'Erweiterte Fachkraft-Ausbildung; Diskretion; Physische Fitness',
-    vorteile: 'Anspruchsvolles Umfeld; Hohe Vergütung; Exklusive Aufgaben',
-    beschreibung: 'In dieser hochsensiblen Position gewährleisten Sie die physische Integrität Ihrer Schutzbefohlenen. Diskretion, höchste körperliche Fitness und die Fähigkeit zur präventiven Gefahrenanalyse sind hier die absolute Voraussetzung. Ein Job für Profis mit fortgeschrittener Ausbildung.',
+    aufgaben: 'Physischer Schutz von Zielpersonen; Durchführung von Gefährdungsanalysen; Planung von sicheren Routen; Voraufklärung von Einsatzorten; Begleitung bei Reisen und Terminen; Koordination mit anderen Sicherheitskräften',
+    anforderungen: 'Geprüfte Schutz- und Sicherheitskraft oder höher; Waffensachkunde nach §7 WaffG; Höchste physische und psychische Fitness; Absolute Diskretion; Führerschein Kl. B; Einwandfreies polizeiliches Führungszeugnis',
+    vorteile: 'Herausragende Vergütung; Exklusive und abwechslungsreiche Aufgaben; Arbeit in einem Elite-Team; Spezialtrainings; Kostenlose Ausrüstung; Internationales Arbeitsumfeld',
+    beschreibung: 'Dies ist die Königsklasse der Sicherheit. Als Personenschützer tragen Sie die Verantwortung für das Leben anderer. Wir suchen absolute Vollprofis mit Leidenschaft für den Beruf. Quereinsteiger mit Hintergrund bei Behörden (Polizei/Bundeswehr) sind ideal für unser Team.',
     seoDescription: 'Personenschutz in {{LOCATION}}. Höchste Anforderungen, beste Bezahlung.',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -198,7 +206,8 @@ module.exports = [
       'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
-    ]
+    ],
+    image: 'images/jobs/05-personenschutz.png'
   },
   {
     title: 'Werkschutzmitarbeiter (m/w/d)',
@@ -206,10 +215,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2620,
     salaryMax: 2850,
-    aufgaben: 'Pfortendienst; Werksgelände-Kontrolle; Brandschutz',
-    anforderungen: 'Zuverlässigkeit; Deutsch-Kenntnisse; Teamfähigkeit',
-    vorteile: 'Stabile Schichten; Langfristiger Einsatz; Übernahme-Option',
-    beschreibung: 'Sichern Sie industrielle Produktionsstätten und Logistikzentren ab. Sie kontrollieren den Zu- und Abgang, führen Brandschutzkontrollen durch und sind erste Kontaktperson für LKW-Fahrer und Mitarbeiter an der Pforte. Langfristige Perspektiven in stabilen Industrieunternehmen.',
+    aufgaben: 'Pforten- und Tordienst; Kontrolle des LKW-Verkehrs; Brandschutzkontrollen und Überwachung; Durchführung von Werksstreifen; Ersthelfer im Notfall; Schlüssel- und Fuhrparkmanagement',
+    anforderungen: 'Zuverlässigkeit und hohe Pünktlichkeit; Freundlicher Umgangston; Deutschkenntnisse (B2); §34a Sachkunde (Schulung möglich); PC-Grundkenntnisse; Teamfähigkeit',
+    vorteile: 'Langfristige Jobsicherheit in der Industrie; Stabile Schichtpläne für gute Planung; Attraktive Tarifvergütung; Übernahmeoption durch den Kunden; Umfangreiche Einarbeitung; Kostenlose Schulungen',
+    beschreibung: 'Werden Sie zum Logistik-Wächter. Im Werkschutz kontrollieren Sie den Puls großer Fabriken und Lagerzentren. Wir suchen zuverlässige Mitarbeiter, die Ordnung lieben. Auch als Quereinsteiger finden Sie bei uns den idealen Weg in ein stabiles Arbeitsverhältnis.',
     seoDescription: 'Werkschutzmitarbeiter in {{LOCATION}} gesucht. Jetzt bewerben!',
     localContexts: [
       'In den Industrieanlagen von ${city} verantworten Sie die strenge Zutrittskontrolle, das Parkplatzmanagement sowie konsequente Fahrzeugkontrollen der Lieferanten.',
@@ -220,7 +229,8 @@ module.exports = [
       'In ${city} sind Sie der zentrale Koordinator für Sicherheitsdienste auf großen Werksgeländen mit internationalem Publikumsverkehr.',
       'Die Einhaltung der Unfallverhütungsvorschriften (UVV) in ${city} wird durch Ihre Kontrollen und Ihre Umsicht maßgeblich sichergestellt.',
       'Bringen Sie Ihre Erfahrung in ${city} ein und werden Sie Teil eines qualifizierten Werkschutz-Teams in der lokalen Industrie.'
-    ]
+    ],
+    image: 'images/jobs/02-werkschutz.png'
   },
   {
     title: 'Brandwache (m/w/d)',
@@ -228,10 +238,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2770,
     salaryMax: 3030,
-    aufgaben: 'Überwachung von Heißarbeiten; Fluchtwegsicherung; Erstbrandbekämpfung',
-    anforderungen: 'Brandschutzhelfer-Quali (wird geschult); Aufmerksamkeit',
-    vorteile: 'Flexible Einsätze; Gute Bezahlung; Wichtige Aufgabe',
-    beschreibung: 'Prävention ist der beste Brandschutz. Als Brandwache begleiten Sie gefährliche Arbeiten, überwachen Brandmeldeanlagen und Fluchtwege und greifen im Ernstfall sofort ein. Eine verantwortungsvolle Aufgabe, die höchste Aufmerksamkeit erfordert.',
+    aufgaben: 'Überwachung feuergefährlicher Arbeiten; Sicherstellung der Fluchtwege; Erstbrandbekämpfung im Ernstfall; Dokumentation der Brandschutzauflagen; Kontrolle von Löscheinrichtungen; Evakuierungshelfer im Notfall',
+    anforderungen: 'Ausbildung zum Brandschutzhelfer (wird geschult); Sachkunde §34a; Hohe Konzentrationsfähigkeit; Zuverlässigkeit; Technisches Verständnis; Körperliche Fitness',
+    vorteile: 'Spannende Einsätze auf Großbaustellen; Überdurchschnittliche Bezahlung; Krisensicherer Job; Flexible Dienstpläne; Kostenlose Fachausbildung; Weiterbildung zum Brandschutzbeauftragten',
+    beschreibung: 'Prävention rettet Leben. Als Brandwache sind Sie spezialisiert auf den Schutz vor Feuer. Wir suchen aufmerksame Köpfe, die Gefahren erkennen, bevor sie entstehen. Quereinsteiger werden bei uns intensiv zum Brandschutz-Experten ausgebildet.',
     seoDescription: 'Brandwache in {{LOCATION}}. Sicherer Job mit Verantwortung.',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -243,7 +253,8 @@ module.exports = [
       'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
-    ]
+    ],
+    image: 'images/jobs/03-brandwache.png'
   },
   {
     title: 'Einzelhandelsdetektiv/-in (m/w/d)',
@@ -251,10 +262,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2620,
     salaryMax: 2850,
-    aufgaben: 'Ladendiebe stellen; Videoüberwachung; Dokumentation',
-    anforderungen: 'Sachkunde §34a; Beobachtungsgabe; Durchsetzungsvermögen',
-    vorteile: 'Zivile Arbeit; Abwechslung; Eigenverantwortung',
-    beschreibung: 'Schützen Sie Warenwerte vor Diebstahl. Ob im Doorman-Style oder in ziviler Observation – Sie erkennen verdächtiges Verhalten frühzeitig, stellen Täter rechtssicher und arbeiten eng mit der Polizei zusammen. Ein spannender Job mit täglichen Erfolgsmomenten.',
+    aufgaben: 'Unauffällige Observation auf der Verkaufsfläche; Bedienung der Videoüberwachung; Identifizierung von Verdachtspersonen; Rechtssichere Stellung von Ladendieben; Zusammenarbeit mit Filialleitung und Polizei; Erstellung von Strafanzeigen',
+    anforderungen: 'Bestandene Sachkundeprüfung §34a GewO; Schnelle Auffassungsgabe; Durchsetzungsvermögen; Gepflegtes Erscheinungsbild; Einwandfreies Führungszeugnis; Deutsch fließend',
+    vorteile: 'Abwechslungsreicher Arbeitsalltag ohne Uniform; Hohe Eigenverantwortung; Attraktive Prämierungsmöglichkeiten; Arbeiten im zivilen Team; Krisensicherer Job; Flexible Einsatzorte',
+    beschreibung: 'Werden Sie zum Jäger auf der Verkaufsfläche. Als Einzelhandelsdetektiv schützen Sie Warenwerte und decken Diebstähle auf. Wir suchen Menschen mit "siebtem Sinn" und sicherem Auftreten. Quereinsteiger mit kriminalistischem Gespür sind bei uns genau richtig.',
     seoDescription: 'Kaufhausdetektiv in {{LOCATION}} werden. Bewirb dich jetzt!',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -266,7 +277,8 @@ module.exports = [
       'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
-    ]
+    ],
+    image: 'images/jobs/04-einzelhandelsdetektiv.png'
   },
   {
     title: 'Pfortendienst (m/w/d)',
@@ -274,10 +286,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2620,
     salaryMax: 2850,
-    aufgaben: 'Besucherkontrolle; Schlüsselausgabe; Telefonvermittlung',
-    anforderungen: 'Freundliches Auftreten; Pünktlichkeit; Deutsch-Kenntnisse',
-    vorteile: 'Ruhiger Arbeitsplatz; Feste Zeiten; Stabiles Umfeld',
-    beschreibung: 'Sie sind das Herzstück der Logistik und Sicherheit. An der Pforte steuern Sie den gesamten Personen- und Warenverkehr, geben Schlüssel aus und behalten per Videoüberwachung das gesamte Areal im Blick. Ein ruhiger, aber verantwortungsvoller Arbeitsplatz.',
+    aufgaben: 'Zentrale Pfortenbesetzung; Kontrolle des Personen- und Warenverkehrs; Telefondienst und Schlüsselausgabe; Überwachung von Gefahrenmeldeanlagen; Dokumentation am PC; Einweisung von Lieferanten',
+    anforderungen: 'Freundliches und bestimmtes Auftreten; Gute Deutschkenntnisse; PC-Grundkenntnisse; §34a Sachkunde (Schulung möglich); Zuverlässigkeit; Pünktlichkeit',
+    vorteile: 'Ruhiger und sauberer Arbeitsplatz; Planbare Arbeitszeiten; Langfristige Festanstellung; Pünktliche Bezahlung; Kostenlose Dienstkleidung; Nettes Team vor Ort',
+    beschreibung: 'Sie sind der Knotenpunkt des Objekts. An der Pforte haben Sie alles im Blick und steuern den Ablauf. Wir suchen freundliche Mitarbeiter, die gerne Verantwortung tragen. Quereinsteiger profitieren von unseren kurzen Schulungswegen und dem schnellen Einstieg.',
     seoDescription: 'Job im Pfortendienst in {{LOCATION}}. Jetzt bewerben!',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -289,7 +301,8 @@ module.exports = [
       'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
-    ]
+    ],
+    image: 'images/jobs/12-pfoertnerdienst.png'
   },
   {
     title: 'Fachkraft für Flughafensicherheit (m/w/d)',
@@ -297,10 +310,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 3200,
     salaryMax: 3800,
-    aufgaben: 'Passagierkontrolle; Gepäckscreening; Luftsicherheit',
-    anforderungen: 'Luftsicherheitsassistent (wird geschult); Führungszeugnis',
-    vorteile: 'Tariflohn; Spannendes Umfeld; Sicherer Arbeitsplatz',
-    beschreibung: 'Sichern Sie das Tor zur Welt. An den Luftsicherheitskontrollen prüfen Sie Fluggäste und Handgepäck nach strengen gesetzlichen Vorgaben. Ein systemrelevanter Job in einem internationalen und hochspannenden Umfeld.',
+    aufgaben: 'Luftsicherheitskontrolle von Passagieren; Durchleuchtung von Handgepäck; Kontrolle von Bordkarten; Überprüfung der Personalausweise; Sicherung des Flughafengeländes; Überwachung von Frachtgut',
+    anforderungen: 'Ausbildung zum Luftsicherheitsassistent (wird geschult); Zuverlässigkeitsüberprüfung nach §7 LuftSig; Deutsch fließend; Führungszeugnis ohne Einträge; Belastbarkeit; Hohe Konzentration',
+    vorteile: 'Herausragende Bezahlung; Arbeiten am Puls der Welt; Sicherer und systemrelevanter Job; Kostenlose Spezialausbildung; Zuschläge und Sonderleistungen; Langfristige Karriereplanung',
+    beschreibung: 'Sichern Sie den Himmel über uns. Am Flughafen arbeiten Sie in einem hochdynamischen und internationalen Umfeld. Wir bilden Sie gezielt für diese anspruchsvolle Aufgabe aus. Quereinsteiger mit Fernweh und hohem Verantwortungsbewusstsein sind bei uns ideal aufgehoben.',
     seoDescription: 'Flughafensicherheit in {{LOCATION}} suchen neue Mitarbeiter.',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -312,7 +325,8 @@ module.exports = [
       'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
-    ]
+    ],
+    image: 'images/jobs/09-flugsicherheit.png'
   },
   {
     title: 'Mobiler Sicherheitsdienst (m/w/d)',
@@ -320,10 +334,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2770,
     salaryMax: 3030,
-    aufgaben: 'Alarmverfolgung; Kontrollfahrten; Schließdienste',
-    anforderungen: 'Führerschein; Sachkunde §34a; Flexibilität',
-    vorteile: 'Dienstfahrzeug; Abwechslung; Nachtzuschläge',
-    beschreibung: 'Flexibel, mobil, effizient. Im mobilen Dienst führen Sie Alarmverfolgung und Kontrollfahrten für verschiedenste Kunden durch. Jeder Tag ist anders, und Ihr Dienstfahrzeug ist Ihr mobiles Büro.',
+    aufgaben: 'Mobile Objektkontrolle mittels Dienstfahrzeug; Schnelle Intervention bei Alarmen; Öffnungs- und Schließdienste; Bestreifung von Wohn- und Gewerbegebieten; Dokumentation über elektronische Wächterkontrollsysteme; Kontaktperson für Kunden vor Ort',
+    anforderungen: 'Gültige Fahrerlaubnis Klasse B; Sachkunde nach §34a; Zuverlässigkeit und Pünktlichkeit; Einwandfreies Führungszeugnis; Deutschkenntnisse; Flexibilität im Schichtdienst',
+    vorteile: 'Überdurchschnittliche Vergütung; Modernstes Dienstfahrzeug; Arbeiten mit neuester Technik; Hohe Autonomie bei der Arbeit; Krisenfestes Beschäftigungsverhältnis; Unterstützung bei Weiterbildungen',
+    beschreibung: 'Sicherheit, wo sie gebraucht wird. Im mobilen Sicherheitsdienst sind Sie das schnelle Eingreiftrupp für unsere Kunden. Wir suchen entspannte Fahrer, die im Ernstfall genau wissen, was zu tun ist. Quereinsteiger werden bei uns intensiv auf alle Szenarien vorbereitet.',
     seoDescription: 'Mobiler Sicherheitsdienst in {{LOCATION}}. Attraktives Stellenangebot!',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -335,7 +349,8 @@ module.exports = [
       'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
-    ]
+    ],
+    image: 'images/jobs/11-streifendienst.png'
   },
   {
     title: 'Bahnsicherheitskraft (m/w/d)',
@@ -343,10 +358,10 @@ module.exports = [
     badgeClass: '',
     salaryMin: 2850,
     salaryMax: 3200,
-    aufgaben: 'Präsenz an Bahnhöfen; Streife im Zug; Hausordnung durchsetzen',
-    anforderungen: 'Belastbarkeit; Deutsch fließend; §34a Sachkunde',
-    vorteile: 'Gute Bezahlung; Job-Ticket; Sicherer Arbeitgeber',
-    beschreibung: 'Sorgen Sie für Ordnung und Sicherheit an Bahnhöfen und in Zügen. Sie setzen das Hausrecht durch, unterstützen Reisende und verhindern Vandalismus. Ein krisensicherer Job direkt am Puls des städtischen Lebens.',
+    aufgaben: 'Bahnhofsmanagement und Präsenzstreife; Durchsetzung der Hausordnung der DB; Hilfeleistung für Fahrgäste und Information; Überwachung der Sicherheit in Zügen; Deeskalation und Intervention; Kooperation mit Behörden',
+    anforderungen: 'Sachkunde §34a GewO; Hohe Deeskalationskompetenz; Gute Deutschkenntnisse; Teamfähigkeit; Belastbarkeit; Erweitertes polizeiliches Führungszeugnis',
+    vorteile: 'Tarifentlohnung mit hohen Zulagen; Kostenloses Job-Ticket der Bahn; Krisensicherer Arbeitgeber; Spannende Einsätze am Limit; Kostenlose Ausrüstung; Starke Personalvertretung',
+    beschreibung: 'Sorgen Sie für Ordnung auf den Schienen. Als Bahnsicherheitskraft sind Sie für tausende Pendler der Anker in der Not. Wir suchen belastbare Persönlichkeiten, die gerne Verantwortung tragen. Quereinsteiger finden durch unsere Partnerschaften einen schnellen Weg in diesen Premium-Beruf.',
     seoDescription: 'Bahnsicherheit in {{LOCATION}}. Werden Sie Teil des Teams!',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -358,6 +373,7 @@ module.exports = [
       'In ${city} setzen wir auf Zuverlässigkeit und lokale Expertise für unsere Kunden.',
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
-    ]
+    ],
+    image: 'images/jobs/10-bahnsicherheit.png'
   }
 ];
