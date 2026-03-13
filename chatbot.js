@@ -546,10 +546,15 @@
     // Chat Window
     const win = document.createElement('div');
     win.id = 'zsbv-chatbot-window';
+    
+    // Check if we are in a subdirectory (like /jobs/)
+    const isSubPage = window.location.pathname.includes('/jobs/');
+    const basePath = isSubPage ? '../' : '';
+
     win.innerHTML = `
       <div class="zsbv-chat-header">
         <div class="zsbv-chat-avatar">
-          <img src="images/max-profile.png" alt="Max - Sicherheitsberater">
+          <img src="${basePath}images/max-profile.png" alt="Max - Sicherheitsberater">
         </div>
         <div class="zsbv-chat-header-info">
           <h3>${CONFIG.botName}</h3>
