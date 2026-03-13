@@ -8,7 +8,7 @@ module.exports = [
     aufgaben: 'Objekt- & Werkschutz; Kontrollrundgänge; Dokumentation; Alarmverfolgung',
     anforderungen: 'Zuverlässigkeit; Deutsch-Grundkenntnisse; Einwandfreies Führungszeugnis',
     vorteile: 'Kostenlose Qualifizierung; Unbefristeter Arbeitsvertrag; Job-Garantie',
-    beschreibung: 'Sichern Sie Objekte und Werksgelände ab. Wir bilden Sie kostenlos aus.',
+    beschreibung: 'In der Rolle als Wachschutzmitarbeiter sind Sie das Rückgrat der Sicherheit für unsere Kunden. Sie schützen Industrieanlagen, Gewerbeobjekte und sensible Areale vor unbefugtem Zugriff, Vandalismus und Brandschäden. Durch Ihre regelmäßigen Kontrollgänge und die professionelle Alarmverfolgung gewährleisten Sie einen reibungslosen Betriebsablauf.',
     seoDescription: 'Job als Wachschutzmitarbeiter in {{LOCATION}}. Jetzt bewerben!',
     localContexts: [
       'Als Wachschutzmitarbeiter in ${city} patrouillieren Sie primär bei Tag und Nacht durch lokale Industrie- und Gewerbegebiete, um maximale Prävention zu gewährleisten.',
@@ -26,7 +26,7 @@ module.exports = [
     aufgaben: 'Zutrittskontrolle & Empfang; Objekt- & Werkschutz; Kontrollrundgänge & Dokumentation; Alarmverfolgung & Intervention',
     anforderungen: 'Kein Vorwissen erforderlich; §34a Qualifizierung inklusive; Deutsch mind. B1; Einwandfreies Führungszeugnis',
     vorteile: 'Kostenlose §34a Qualifizierung; Unbefristeter Arbeitsvertrag; Bildungsgutschein möglich; Vermittlung nach Kursabschluss',
-    beschreibung: 'Starten Sie Ihre Karriere in der Sicherheitsbranche – Quereinsteiger willkommen! Über die ZSBV erhalten Sie eine kostenlose Qualifizierung inkl. §34a Sachkundeprüfung und anschließender Arbeitsplatzvermittlung.',
+    beschreibung: 'Als Sicherheitsmitarbeiter sind Sie die erste Anlaufstelle für Sicherheit und Service. Sie verbinden klassische Schutzaufgaben mit einem hohen Maß an Kundenorientierung. Ob am Empfang, bei der Zutrittskontrolle oder im Objektschutz – Sie behalten stets den Überblick und agieren souverän in jeder Situation.',
     seoDescription: 'Gesucht: Sicherheitsmitarbeiter (m/w/d) in {{LOCATION}}. Starten Sie mit unserer kostenlosen §34a Schulung inkl. direkter Vermittlung. Auch für Quereinsteiger!',
     localContexts: [
       'In ${city} übernehmen Sie vielseitige Schutzaufgaben, von der Zutrittskontrolle bis zu regelmäßigen Kontrollrundgängen bei lokalen Unternehmen.',
@@ -44,7 +44,7 @@ module.exports = [
     aufgaben: 'Sreife in Bussen und Bahnen; Deeskalation; Fahrgastbetreuung',
     anforderungen: 'Sachkunde §34a; Belastbarkeit; Schichtbereitschaft',
     vorteile: 'Höheres Gehalt; Zuschläge; Sicherer Arbeitsplatz',
-    beschreibung: 'Sorgen Sie für Sicherheit im öffentlichen Nahverkehr.',
+    beschreibung: 'Sorgen Sie für ein sicheres Gefühl in Bus und Bahn. Als Sicherheitskraft im öffentlichen Personennahverkehr sind Sie präsent, hilfsbereit und durchsetzungsstark. Sie deeskalieren Konflikte, unterstützen Fahrgäste und schützen die Infrastruktur unserer Partnerbetriebe vor Vandalismus.',
     seoDescription: 'ÖPNV-Sicherheitskraft in {{LOCATION}} gesucht. Jetzt informieren!',
     localContexts: [
       'In den Bussen, Bahnen und an den Bahnhöfen von ${city} sorgen Sie als präsente Sicherheitskraft für das Wohlgefühl und den Schutz aller Fahrgäste.',
@@ -62,7 +62,7 @@ module.exports = [
     aufgaben: 'Sicherer Transport von Werten; Dokumentation; Teamarbeit',
     anforderungen: 'Waffensachkunde; Führerschein Kl. B; Zuverlässigkeit',
     vorteile: 'Top Gehalt; Spezialausbildung; Verantwortung',
-    beschreibung: 'Fahren Sie Werttransporte in gepanzerten Fahrzeugen.',
+    beschreibung: 'Übernehmen Sie eine der verantwortungsvollsten Positionen in der Branche. Als Teil eines hochspezialisierten Teams transportieren Sie Werte unter Einhaltung strengster Sicherheitsprotokolle. Höchste Wachsamkeit, Zuverlässigkeit und technisches Verständnis sind hier Ihre wichtigsten Werkzeuge.',
     seoDescription: 'Job im Geld- und Werttransport in {{LOCATION}}. Werden Sie Teil des Teams!',
     localContexts: [
       'Fahren Sie hochgesicherte Spezialfahrzeuge in und um ${city}, um Werttransporte nach strikten Sicherheitsprotokollen durchzuführen.',
@@ -80,7 +80,7 @@ module.exports = [
     aufgaben: 'Revierfahrten; Verschlusskontrollen; Alarmverfolgung',
     anforderungen: 'Führerschein; §34a Sachkunde; Pünktlichkeit',
     vorteile: 'Dienstwagen; Eigenverantwortung; Abwechslung',
-    beschreibung: 'Fahren Sie Reviere ab und sichern Sie Kundenobjekte.',
+    beschreibung: 'Sorgen Sie für Sicherheit auf Achse. Im Revierdienst prüfen Sie nacheinander verschiedene Kundenobjekte, führen Verschlusskontrollen durch und reagieren blitzschnell auf Alarme. Ein abwechslungsreicher Job für mobile Profis, die gerne eigenverantwortlich arbeiten.',
     seoDescription: 'Revierwachmann in {{LOCATION}} werden. Jetzt bewerben!',
     localContexts: [
       'Mit dem Dienstfahrzeug fahren Sie in ${city} festgelegte Reviere ab und prüfen lokale Firmengelände sowie sensible Außenbereiche auf Unversehrtheit.',
@@ -98,7 +98,7 @@ module.exports = [
     aufgaben: 'Telefondienst; Besuchermanagement; Schlüsselausgabe',
     anforderungen: 'Gepflegtes Auftreten; Deutsch fließend; Zuverlässigkeit',
     vorteile: 'Geregelte Arbeitszeiten; Moderner Arbeitsplatz; Langfristigkeit',
-    beschreibung: 'Repräsentieren Sie unsere Kunden am Empfang.',
+    beschreibung: 'Sie sind die Visitenkarte unserer Kunden. In dieser Position verbinden Sie professionelles Auftreten mit sicherheitstechnischem Know-how. Sie koordinieren den Besucherverkehr, bedienen die Telefonzentrale und behalten die Sicherheitssysteme im Auge – ideal für serviceorientierte Persönlichkeiten.',
     seoDescription: 'Sicherheits-Empfangskraft in {{LOCATION}} gesucht. Attraktive Bedingungen!',
     localContexts: [
       'Sie repräsentieren moderne Bürokomplexe in ${city}: Ihre primären Aufgaben sind der professionelle Empfang, die Ausweiskontrolle und das Besuchermanagement.',
@@ -116,7 +116,7 @@ module.exports = [
     aufgaben: 'Einlasskontrolle; Ordnungstätigkeiten; VIP-Betreuung',
     anforderungen: 'Teamfähigkeit; Belastbarkeit; Freundliches Auftreten',
     vorteile: 'Flexible Zeiten; Spannende Events; Nettes Team',
-    beschreibung: 'Sichern Sie Konzerte und Messen ab.',
+    beschreibung: 'Seien Sie mittendrin bei den größten Events der Region. Vom Einlassmanagement bis zur VIP-Betreuung sorgen Sie dafür, dass Besucher sicher feiern können. Flexibilität, Teamgeist und ein freundliches, aber bestimmtes Auftreten zeichnen Sie aus.',
     seoDescription: 'Arbeiten im Veranstaltungsschutz in {{LOCATION}}. Sei dabei!',
     localContexts: [
       'Sichern Sie die spannendsten Konzerte und Messen in ${city} ab: Ihre Aufgaben reichen von Einlasskontrollen bis zum koordinierten Ordnungsdienst.',
@@ -134,7 +134,7 @@ module.exports = [
     aufgaben: 'Objektüberwachung; Zutrittskontrolle; Dokumentation',
     anforderungen: 'Sachkunde §34a; Deutschkenntnisse; Zuverlässigkeit',
     vorteile: 'Sicherer Job; Nachtzuschläge; Kurze Wege',
-    beschreibung: 'Sichern Sie Gewerbe- und Industrieobjekte.',
+    beschreibung: 'Sichern Sie die Werte unserer Kunden direkt vor Ort. Im Objektschutz überwachen Sie Betriebsgelände, steuern den Zutritt von Lieferanten und Personal und dokumentieren alle Vorkommnisse lückenlos. Ein krisensicherer Arbeitsplatz mit klaren Strukturen.',
     seoDescription: 'Objektschutz-Jobs in {{LOCATION}}. Quereinstieg möglich!',
     localContexts: [
       'Der Fokus in ${city} liegt auf der lückenlosen Videoüberwachung und dem professionellen Besuchermanagement an Zugangspunkten großer Industrieanlagen.',
@@ -152,7 +152,7 @@ module.exports = [
     aufgaben: 'Begleitschutz; Gefahrenanalyse; Voraufklärung',
     anforderungen: 'Erweiterte Fachkraft-Ausbildung; Diskretion; Physische Fitness',
     vorteile: 'Anspruchsvolles Umfeld; Hohe Vergütung; Exklusive Aufgaben',
-    beschreibung: 'Schützen Sie Einzelpersonen in gefährdeten Lagen.',
+    beschreibung: 'In dieser hochsensiblen Position gewährleisten Sie die physische Integrität Ihrer Schutzbefohlenen. Diskretion, höchste körperliche Fitness und die Fähigkeit zur präventiven Gefahrenanalyse sind hier die absolute Voraussetzung. Ein Job für Profis mit fortgeschrittener Ausbildung.',
     seoDescription: 'Personenschutz in {{LOCATION}}. Höchste Anforderungen, beste Bezahlung.',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -169,7 +169,7 @@ module.exports = [
     aufgaben: 'Pfortendienst; Werksgelände-Kontrolle; Brandschutz',
     anforderungen: 'Zuverlässigkeit; Deutsch-Kenntnisse; Teamfähigkeit',
     vorteile: 'Stabile Schichten; Langfristiger Einsatz; Übernahme-Option',
-    beschreibung: 'Sichern Sie große Werksgelände ab.',
+    beschreibung: 'Sichern Sie industrielle Produktionsstätten und Logistikzentren ab. Sie kontrollieren den Zu- und Abgang, führen Brandschutzkontrollen durch und sind erste Kontaktperson für LKW-Fahrer und Mitarbeiter an der Pforte. Langfristige Perspektiven in stabilen Industrieunternehmen.',
     seoDescription: 'Werkschutzmitarbeiter in {{LOCATION}} gesucht. Jetzt bewerben!',
     localContexts: [
       'In den Industrieanlagen von ${city} verantworten Sie die strenge Zutrittskontrolle, das Parkplatzmanagement sowie konsequente Fahrzeugkontrollen der Lieferanten.',
@@ -187,7 +187,7 @@ module.exports = [
     aufgaben: 'Überwachung von Heißarbeiten; Fluchtwegsicherung; Erstbrandbekämpfung',
     anforderungen: 'Brandschutzhelfer-Quali (wird geschult); Aufmerksamkeit',
     vorteile: 'Flexible Einsätze; Gute Bezahlung; Wichtige Aufgabe',
-    beschreibung: 'Verhindern Sie Brände auf Baustellen und Events.',
+    beschreibung: 'Prävention ist der beste Brandschutz. Als Brandwache begleiten Sie gefährliche Arbeiten, überwachen Brandmeldeanlagen und Fluchtwege und greifen im Ernstfall sofort ein. Eine verantwortungsvolle Aufgabe, die höchste Aufmerksamkeit erfordert.',
     seoDescription: 'Brandwache in {{LOCATION}}. Sicherer Job mit Verantwortung.',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -204,7 +204,7 @@ module.exports = [
     aufgaben: 'Ladendiebe stellen; Videoüberwachung; Dokumentation',
     anforderungen: 'Sachkunde §34a; Beobachtungsgabe; Durchsetzungsvermögen',
     vorteile: 'Zivile Arbeit; Abwechslung; Eigenverantwortung',
-    beschreibung: 'Verhindern Sie Diebstähle im Einzelhandel.',
+    beschreibung: 'Schützen Sie Warenwerte vor Diebstahl. Ob im Doorman-Style oder in ziviler Observation – Sie erkennen verdächtiges Verhalten frühzeitig, stellen Täter rechtssicher und arbeiten eng mit der Polizei zusammen. Ein spannender Job mit täglichen Erfolgsmomenten.',
     seoDescription: 'Kaufhausdetektiv in {{LOCATION}} werden. Bewirb dich jetzt!',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -221,7 +221,7 @@ module.exports = [
     aufgaben: 'Besucherkontrolle; Schlüsselausgabe; Telefonvermittlung',
     anforderungen: 'Freundliches Auftreten; Pünktlichkeit; Deutsch-Kenntnisse',
     vorteile: 'Ruhiger Arbeitsplatz; Feste Zeiten; Stabiles Umfeld',
-    beschreibung: 'Besetzen Sie die Pforte bei unseren Kunden.',
+    beschreibung: 'Sie sind das Herzstück der Logistik und Sicherheit. An der Pforte steuern Sie den gesamten Personen- und Warenverkehr, geben Schlüssel aus und behalten per Videoüberwachung das gesamte Areal im Blick. Ein ruhiger, aber verantwortungsvoller Arbeitsplatz.',
     seoDescription: 'Job im Pfortendienst in {{LOCATION}}. Jetzt bewerben!',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -238,7 +238,7 @@ module.exports = [
     aufgaben: 'Passagierkontrolle; Gepäckscreening; Luftsicherheit',
     anforderungen: 'Luftsicherheitsassistent (wird geschult); Führungszeugnis',
     vorteile: 'Tariflohn; Spannendes Umfeld; Sicherer Arbeitsplatz',
-    beschreibung: 'Sichern Sie den Flugbetrieb ab.',
+    beschreibung: 'Sichern Sie das Tor zur Welt. An den Luftsicherheitskontrollen prüfen Sie Fluggäste und Handgepäck nach strengen gesetzlichen Vorgaben. Ein systemrelevanter Job in einem internationalen und hochspannenden Umfeld.',
     seoDescription: 'Flughafensicherheit in {{LOCATION}} suchen neue Mitarbeiter.',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -255,7 +255,7 @@ module.exports = [
     aufgaben: 'Alarmverfolgung; Kontrollfahrten; Schließdienste',
     anforderungen: 'Führerschein; Sachkunde §34a; Flexibilität',
     vorteile: 'Dienstfahrzeug; Abwechslung; Nachtzuschläge',
-    beschreibung: 'Seien Sie mobil im Einsatz für unsere Kunden.',
+    beschreibung: 'Flexibel, mobil, effizient. Im mobilen Dienst führen Sie Alarmverfolgung und Kontrollfahrten für verschiedenste Kunden durch. Jeder Tag ist anders, und Ihr Dienstfahrzeug ist Ihr mobiles Büro.',
     seoDescription: 'Mobiler Sicherheitsdienst in {{LOCATION}}. Attraktives Stellenangebot!',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
@@ -272,7 +272,7 @@ module.exports = [
     aufgaben: 'Präsenz an Bahnhöfen; Streife im Zug; Hausordnung durchsetzen',
     anforderungen: 'Belastbarkeit; Deutsch fließend; §34a Sachkunde',
     vorteile: 'Gute Bezahlung; Job-Ticket; Sicherer Arbeitgeber',
-    beschreibung: 'Sorgen Sie für Sicherheit auf den Schienen.',
+    beschreibung: 'Sorgen Sie für Ordnung und Sicherheit an Bahnhöfen und in Zügen. Sie setzen das Hausrecht durch, unterstützen Reisende und verhindern Vandalismus. Ein krisensicherer Job direkt am Puls des städtischen Lebens.',
     seoDescription: 'Bahnsicherheit in {{LOCATION}}. Werden Sie Teil des Teams!',
     localContexts: [
       'In ${city} übernehmen Sie verantwortungsvolle Sicherheitsaufgaben in einem dynamischen, wachsenden Umfeld.',
