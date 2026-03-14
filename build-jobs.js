@@ -304,8 +304,8 @@ function generateAllJobs(template) {
             </div>`;
 
       let html = template
-        .replace(/{{JOB_TITLE}}/g, esc(tmpl.title))
-        .replace(/{{JOB_LOCATION}}/g, esc(city.name))
+        .replace(/{{TITLE}}/g, esc(tmpl.title))
+        .replace(/{{LOCATION}}/g, esc(city.name))
         .replace(/{{DATE_POSTED}}/g, esc(today))
         .replace(/{{EMPLOYMENT}}/g, esc('Vollzeit'))
         .replace(/{{SALARY}}/g, esc(salary))
