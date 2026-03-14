@@ -137,6 +137,9 @@ function generateAllJobs(template) {
       const slug = slugify(`${tmpl.title}-${city.name}`);
       const jobUrl = `${SITE_URL}/jobs/${slug}.html`;
 
+      // Keep clean title for lists, randomTitle for SEO
+      const cleanTitle = `${tmpl.title} in ${city.name}`;
+
       // 2. Unique Reference Number
       const refNumber = `ZSBV-${city.plz}-${Math.floor(1000 + Math.random() * 9000)}-${tmpl.title.substring(0,3).toUpperCase()}`;
 
@@ -328,6 +331,7 @@ function generateAllJobs(template) {
         slug, 
         html, 
         title: randomTitle, 
+        cleanTitle: cleanTitle,
         location: city.name, 
         region: city.region, 
         salary, 
@@ -382,13 +386,13 @@ function generateHtmlSitemap(jobs) {
   let listsHtml = '';
   for (const city of sortedCities) {
     // Sort jobs alphabetically within city
-    jobsByCity[city].sort((a, b) => a.title.localeCompare(b.title));
+    jobsByCity[city].sort((a, b) => a.cleanTitle.localeCompare(b.cleanTitle));
 
     listsHtml += `
       <div class="sitemap-city-group">
         <h3>${esc(city)}</h3>
         <ul>
-          ${jobsByCity[city].map(j => `<li><a href="${j.jobUrl.replace(SITE_URL + '/', '')}">${esc(j.title)}</a></li>`).join('\n          ')}
+          ${jobsByCity[city].map(j => `<li><a href="${j.jobUrl.replace(SITE_URL + '/', '')}">${esc(j.cleanTitle)}</a></li>`).join('\n          ')}
         </ul>
       </div>
     `;
