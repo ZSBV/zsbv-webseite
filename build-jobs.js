@@ -130,9 +130,10 @@ function generateAllJobs(template) {
     for (const city of CITIES) {
       // 1. Title Variety
       const synonyms = TITLE_SYNONYMS[tmpl.title] || [];
-      const allTitles = [tmpl.title, ...synonyms];
-      const randomTitle = allTitles[Math.floor(Math.random() * allTitles.length)];
-
+      const titlePrefix = Math.random() > 0.5 ? 'ZSBV | ' : '';
+      const titleSuffix = Math.random() > 0.5 ? ' | Bildungsgutschein' : ' | Karriere';
+      const randomTitle = `${titlePrefix}${tmpl.title} in ${city.name}${titleSuffix}`;
+      
       const slug = slugify(`${tmpl.title}-${city.name}`);
       const jobUrl = `${SITE_URL}/jobs/${slug}.html`;
 
@@ -303,8 +304,8 @@ function generateAllJobs(template) {
             </div>`;
 
       let html = template
-        .replace(/{{TITLE}}/g, esc(randomTitle))
-        .replace(/{{LOCATION}}/g, esc(city.name))
+        .replace(/{{JOB_TITLE}}/g, esc(tmpl.title))
+        .replace(/{{JOB_LOCATION}}/g, esc(city.name))
         .replace(/{{DATE_POSTED}}/g, esc(today))
         .replace(/{{EMPLOYMENT}}/g, esc('Vollzeit'))
         .replace(/{{SALARY}}/g, esc(salary))
