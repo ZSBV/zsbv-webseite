@@ -11,7 +11,7 @@
  * 
  * Erzeugt außerdem:
  *   - sitemap.xml (für Google)
- *   - jobs-feed.xml (für Indeed)
+ *   - indeed-feed.xml (für Indeed)
  * 
  * Run: node build-jobs.js
  */
@@ -700,8 +700,8 @@ function build() {
   console.log('✅ alle-jobs.html generiert (HTML Sitemap)');
 
   // Indeed Feed
-  fs.writeFileSync(path.join(__dirname, 'jobs-feed.xml'), generateIndeedFeed(jobs), 'utf-8');
-  console.log('✅ jobs-feed.xml generiert (für Indeed)');
+  fs.writeFileSync(path.join(__dirname, 'indeed-feed.xml'), generateIndeedFeed(jobs), 'utf-8');
+  console.log('✅ indeed-feed.xml generiert (für Indeed)');
 
   // Talent.com Feed
   fs.writeFileSync(path.join(__dirname, 'talent-feed.xml'), generateTalentFeed(jobs), 'utf-8');
