@@ -77,6 +77,29 @@ function shuffle(array) {
   return array;
 }
 
+function getFeedHtmlDescription(job) {
+  return `
+    <p><strong>${esc(job.randomIntro)}</strong></p>
+    <p>${esc(job.randomLocalContext)}</p>
+    <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
+    
+    <p>${esc(job.description.replace(job.randomIntro, '').replace(job.randomLocalContext, '').replace(job.randomOutro, '').trim())}</p>
+
+    <h3>Ihre Aufgaben:</h3>
+    <ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+
+    <h3>Anforderungen:</h3>
+    <ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
+
+    <h3>Ihre Vorteile:</h3>
+    <ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+
+    <p>${esc(job.randomOutro)}</p>
+
+    <p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>
+  `.trim();
+}
+
 const TITLE_SYNONYMS = {
   'Sicherheitsmitarbeiter (m/w/d)': ['Sicherheitskraft (m/w/d)', 'Security Guard (m/w/d)', 'Mitarbeiter im Sicherheitsdienst (m/w/d)', 'Security Mitarbeiter (m/w/d)', 'Fachkraft für Objektschutz (m/w/d)'],
   'Wachschutzmitarbeiter (m/w/d)': ['Mitarbeiter im Wachschutz (m/w/d)', 'Wachmann / Wachfrau (m/w/d)', 'Security für Wachdienst (m/w/d)', 'Wachschutz Kraft (m/w/d)'],
@@ -549,27 +572,6 @@ function generateIndeedFeed(jobs) {
   <publisherurl>${SITE_URL}</publisherurl>
   <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n`;
   for (const job of jobs) {
-    const htmlDescription = `
-      <p><strong>${esc(job.randomIntro)}</strong></p>
-      <p>${esc(job.randomLocalContext)}</p>
-      <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
-      
-      <p>${esc(job.description)}</p>
-
-      <h3>Ihre Aufgaben:</h3>
-      <ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
-
-      <h3>Anforderungen:</h3>
-      <ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
-
-      <h3>Ihre Vorteile:</h3>
-      <ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
-
-      <p>${esc(job.randomOutro)}</p>
-
-      <p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>
-    `.trim();
-
     xml += `  <job>
     <title><![CDATA[${job.title}]]></title>
     <date><![CDATA[${new Date(job.datePosted).toUTCString()}]]></date>
@@ -579,7 +581,7 @@ function generateIndeedFeed(jobs) {
     <city><![CDATA[${job.location.replace(/-.*/, '')}]]></city>
     <state><![CDATA[${job.region}]]></state>
     <country><![CDATA[DE]]></country>
-    <description><![CDATA[${htmlDescription}]]></description>
+    <description><![CDATA[${getFeedHtmlDescription(job)}]]></description>
     <salary><![CDATA[${job.salary} € Brutto/Monat]]></salary>
     <jobtype><![CDATA[vollzeit]]></jobtype>
     <expirationdate><![CDATA[${job.validThrough}]]></expirationdate>
@@ -606,32 +608,11 @@ function generateJoobleFeed(jobs) {
 <jobs>\n`;
 
   for (const job of jobs) {
-    const htmlDescription = `
-      <p><strong>${esc(job.randomIntro)}</strong></p>
-      <p>${esc(job.randomLocalContext)}</p>
-      <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
-      
-      <p>${esc(job.description)}</p>
-
-      <h3>Ihre Aufgaben:</h3>
-      <ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
-
-      <h3>Anforderungen:</h3>
-      <ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
-
-      <h3>Ihre Vorteile:</h3>
-      <ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
-
-      <p>${esc(job.randomOutro)}</p>
-
-      <p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>
-    `.trim();
-
     xml += `  <job id="${job.refNumber}">
     <link><![CDATA[${job.jobUrl}]]></link>
     <name><![CDATA[${job.title}]]></name>
     <region><![CDATA[${job.location}]]></region>
-    <description><![CDATA[${htmlDescription}]]></description>
+    <description><![CDATA[${getFeedHtmlDescription(job)}]]></description>
     <pubdate>${pubDate}</pubdate>
     <updated>${pubDate}</updated>
     <salary><![CDATA[${job.salary}]]></salary>
@@ -654,27 +635,6 @@ function generateTalentFeed(jobs) {
   for (const job of jobs) {
     const tmpl = JOB_TEMPLATES.find(t => t.title === job.title);
     
-    const htmlDescription = `
-      <p><strong>${esc(job.randomIntro)}</strong></p>
-      <p>${esc(job.randomLocalContext)}</p>
-      <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
-      
-      <p>${esc(job.description)}</p>
-
-      <h3>Ihre Aufgaben:</h3>
-      <ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
-
-      <h3>Anforderungen:</h3>
-      <ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
-
-      <h3>Ihre Vorteile:</h3>
-      <ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
-
-      <p>${esc(job.randomOutro)}</p>
-
-      <p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>
-    `.trim();
-
     xml += `  <job>
     <title><![CDATA[${job.title}]]></title>
     <company><![CDATA[${COMPANY_NAME}]]></company>
@@ -685,7 +645,7 @@ function generateTalentFeed(jobs) {
     <expirationdate><![CDATA[${job.validThrough}]]></expirationdate>
     <referencenumber><![CDATA[${job.refNumber}]]></referencenumber>
     <url><![CDATA[${job.jobUrl}]]></url>
-    <description><![CDATA[${htmlDescription}]]></description>
+    <description><![CDATA[${getFeedHtmlDescription(job)}]]></description>
     <salary>
       <salary_min><![CDATA[${tmpl ? tmpl.salaryMin : ''}]]></salary_min>
       <salary_max><![CDATA[${tmpl ? tmpl.salaryMax : ''}]]></salary_max>
