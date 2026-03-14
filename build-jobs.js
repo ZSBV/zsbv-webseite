@@ -79,6 +79,8 @@ function shuffle(array) {
 
 function getFeedHtmlDescription(job) {
   return `
+    <p><strong>Quereinsteiger aufgepasst: Die fehlende Sachkundeprüfung §34a können Sie über einen Bildungsgutschein (100% Kostenübernahme durch Arbeitsagentur/Jobcenter) bei unserem zertifizierten Bildungspartner absolvieren – mit dem klaren Ziel einer direkten Festanstellung nach erfolgreichem Abschluss!</strong></p>
+
     <p><strong>${esc(job.randomIntro)}</strong></p>
     <p>${esc(job.randomLocalContext)}</p>
     <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
