@@ -284,6 +284,7 @@ function generateAllJobs(template) {
         .replace(/{{LOCATION}}/g, esc(city.name))
         .replace(/{{DATE_POSTED}}/g, esc(today))
         .replace(/{{EMPLOYMENT}}/g, esc('Vollzeit'))
+        .replace(/{{SALARY}}/g, esc(salary))
         .replace(/{{SALARY_MIN}}/g, esc(tmpl.salaryMin.toLocaleString('de-DE')))
         .replace(/{{SALARY_MAX}}/g, esc(tmpl.salaryMax.toLocaleString('de-DE')))
         .replace(/{{DESCRIPTION}}/g, esc(fullCustomDescription))
@@ -296,7 +297,8 @@ function generateAllJobs(template) {
         .replace(/{{JSON_LD}}/g, JSON.stringify(jsonLd))
         .replace(/{{IMAGE_PATH}}/g, esc(tmpl.image || 'images/jobs/01-objektschutz.png'))
         .replace(/{{META_DESCRIPTION}}/g, esc(tmpl.seoDescription.replace(/\{\{LOCATION\}\}/g, city.name)))
-        .replace(/{{INTERNAL_LINKS}}/g, internalLinksHtml);
+        .replace(/{{INTERNAL_LINKS}}/g, internalLinksHtml)
+        .replace(/{{JOB_URL}}/g, jobUrl);
 
       jobs.push({ 
         slug, 
@@ -587,6 +589,61 @@ function generateIndeedFeed(jobs) {
   return xml;
 }
 
+function generateJoobleFeed(jobs) {
+  const today = new Date();
+  const formatJoobleDate = (d) => {
+    const date = new Date(d);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}.${month}.${year}`;
+  };
+
+  const pubDate = formatJoobleDate(today);
+  const expireDate = formatJoobleDate(new Date(today.getTime() + (45 * 24 * 60 * 60 * 1000)));
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<jobs>\n`;
+
+  for (const job of jobs) {
+    const htmlDescription = `
+      <p><strong>${esc(job.randomIntro)}</strong></p>
+      <p>${esc(job.randomLocalContext)}</p>
+      <p>Stellenangebot: ${esc(job.title)} in ${esc(job.location)}</p>
+      
+      <p>${esc(job.description)}</p>
+
+      <h3>Ihre Aufgaben:</h3>
+      <ul>${job.taskList.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+
+      <h3>Anforderungen:</h3>
+      <ul>${job.reqList.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
+
+      <h3>Ihre Vorteile:</h3>
+      <ul>${job.benefitList.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+
+      <p>${esc(job.randomOutro)}</p>
+
+      <p><em>${esc(VERMITTLUNGSHINWEIS)}</em></p>
+    `.trim();
+
+    xml += `  <job id="${job.refNumber}">
+    <link><![CDATA[${job.jobUrl}]]></link>
+    <name><![CDATA[${job.title}]]></name>
+    <region><![CDATA[${job.location}]]></region>
+    <description><![CDATA[${htmlDescription}]]></description>
+    <pubdate>${pubDate}</pubdate>
+    <updated>${pubDate}</updated>
+    <salary><![CDATA[${job.salary}]]></salary>
+    <company><![CDATA[${COMPANY_NAME}]]></company>
+    <expire>${expireDate}</expire>
+    <jobtype><![CDATA[full-time]]></jobtype>
+  </job>\n`;
+  }
+  xml += '</jobs>\n';
+  return xml;
+}
+
 function generateTalentFeed(jobs) {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <source>
@@ -689,6 +746,10 @@ function build() {
   // Talent.com Feed
   fs.writeFileSync(path.join(__dirname, 'talent-feed.xml'), generateTalentFeed(jobs), 'utf-8');
   console.log('✅ talent-feed.xml generiert (für Talent.com)');
+
+  // Jooble Feed
+  fs.writeFileSync(path.join(__dirname, 'jooble-feed.xml'), generateJoobleFeed(jobs), 'utf-8');
+  console.log('✅ jooble-feed.xml generiert (für Jooble)');
 
   console.log(`\n=========================================================`);
   console.log(`🎉 Build abgeschlossen!`);

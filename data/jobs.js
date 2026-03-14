@@ -20,7 +20,7 @@ module.exports = [
       'Ihre Tätigkeit in ${city} umfasst die lückenlose Überwachung von Außenanlagen und die Sicherstellung der Verschlussordnung.',
       'Werden Sie im Wachschutz in ${city} aktiv und tragen Sie maßgeblich zum Schutz lokaler Infrastrukturen bei.'
     ],
-    image: 'images/jobs/premium/wachschutz.png'
+    image: 'images/jobs/wachschutz.png'
   },
   {
     title: 'Sicherheitsmitarbeiter (m/w/d)',
@@ -43,7 +43,7 @@ module.exports = [
       'Arbeiten Sie in ${city} an vorderster Front und schützen Sie Sachwerte sowie Personen durch Ihre aufmerksame Präsenz.',
       'Das moderne Arbeitsumfeld in ${city} erfordert Zuverlässigkeit und ein Auge fürs Detail bei allen Kontrolltätigkeiten.'
     ],
-    image: 'images/jobs/premium/sicherheitsmitarbeiter.png'
+    image: 'images/jobs/sicherheitsmitarbeiter.png'
   },
   {
     title: 'ÖPNV-Sicherheitskraft (m/w/d)',
@@ -66,7 +66,7 @@ module.exports = [
       'Die Sicherheit der Pendler in ${city} steht an erster Stelle, während Sie im Team für Ordnung in allen Verkehrsmitteln sorgen.',
       'Arbeiten Sie im Herzschlag von ${city} und schützen Sie täglich tausende Fahrgäste vor Belästigungen und Vandalismus.'
     ],
-    image: 'images/jobs/premium/oepnv.png'
+    image: 'images/jobs/oepnv.png'
   },
   {
     title: 'Geld- & Werttransportfahrer/-in (m/w/d)',
@@ -91,7 +91,7 @@ module.exports = [
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ],
-    image: 'images/jobs/premium/geld-wert.png'
+    image: 'images/jobs/geld-wert.png'
   },
   {
     title: 'Revierwachmann/-frau (m/w/d)',
@@ -114,7 +114,7 @@ module.exports = [
       'Die Routenplanung in ${city} ist abwechslungsreich und führt Sie durch alle wichtigen Industrie- und Logistikzentren der Stadt.',
       'Ihre Präsenz in den Straßen von ${city} wirkt präventiv gegen Kriminalität und schont die Ressourcen unserer Kunden.'
     ],
-    image: 'images/jobs/premium/revierdienst.png'
+    image: 'images/jobs/revierdienst.png'
   },
   {
     title: 'Empfangskraft Sicherheit (m/w/d)',
@@ -137,7 +137,7 @@ module.exports = [
       'Ihr Fokus in ${city} liegt auf der lückenlosen Dokumentation des Personenverkehrs und der Überwachung der Brandmeldeanlage am Empfang.',
       'Gestalten Sie den ersten Eindruck in ${city} positiv und sorgen Sie im Hintergrund für die notwendige Sicherheit aller Mitarbeiter.'
     ],
-    image: 'images/jobs/premium/empfang.png'
+    image: 'images/jobs/empfang.png'
   },
   {
     title: 'Veranstaltungsschutz (m/w/d)',
@@ -160,7 +160,7 @@ module.exports = [
       'Ihre Teamfähigkeit in ${city} ist gefragt, wenn es darum geht, große Crowd-Flows sicher durch das Gelände zu leiten.',
       'In den Arenen und Stadien von ${city} sind Sie für die Einlasskontrolle und die Überwachung der Notausgänge verantwortlich.'
     ],
-    image: 'images/jobs/premium/veranstaltungsschutz.png'
+    image: 'images/jobs/veranstaltungsschutz.png'
   },
   {
     title: 'Objektschutzmitarbeiter (m/w/d)',
@@ -183,7 +183,7 @@ module.exports = [
       'In ${city} sind Sie Teil eines Sicherheitskonzeptes, das höchsten Qualitätsansprüchen und lokalen Erfordernissen gerecht wird.',
       'Ihre professionelle Kommunikation in ${city} garantiert, dass Lieferanten und Besucher sich sicher und gut betreut fühlen.'
     ],
-    image: 'images/jobs/premium/objektschutz.png'
+    image: 'images/jobs/objektschutz.png'
   },
   {
     title: 'Personenschützer/-in (m/w/d)',
@@ -207,7 +207,7 @@ module.exports = [
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ],
-    image: 'images/jobs/premium/personenschutz.png'
+    image: 'images/jobs/personenschutz.png'
   },
   {
     title: 'Werkschutzmitarbeiter (m/w/d)',
@@ -230,7 +230,7 @@ module.exports = [
       'Die Einhaltung der Unfallverhütungsvorschriften (UVV) in ${city} wird durch Ihre Kontrollen und Ihre Umsicht maßgeblich sichergestellt.',
       'Bringen Sie Ihre Erfahrung in ${city} ein und werden Sie Teil eines qualifizierten Werkschutz-Teams in der lokalen Industrie.'
     ],
-    image: 'images/jobs/premium/werkschutz.png'
+    image: 'images/jobs/werkschutz.png'
   },
   {
     title: 'Brandwache (m/w/d)',
@@ -254,7 +254,7 @@ module.exports = [
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ],
-    image: 'images/jobs/premium/brandwache.png'
+    image: 'images/jobs/brandwache.png'
   },
   {
     title: 'Einzelhandelsdetektiv/-in (m/w/d)',
@@ -278,7 +278,7 @@ module.exports = [
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ],
-    image: 'images/jobs/premium/detektiv.png'
+    image: 'images/jobs/detektiv.png'
   },
   {
     title: 'Pfortendienst (m/w/d)',
@@ -302,7 +302,7 @@ module.exports = [
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ],
-    image: 'images/jobs/premium/pfortendienst.png'
+    image: 'images/jobs/pfortendienst.png'
   },
   {
     title: 'Fachkraft für Flughafensicherheit (m/w/d)',
@@ -326,7 +326,7 @@ module.exports = [
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ],
-    image: 'images/jobs/premium/flughafen.png'
+    image: 'images/jobs/flughafen.png'
   },
   {
     title: 'Mobiler Sicherheitsdienst (m/w/d)',
@@ -350,7 +350,7 @@ module.exports = [
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ],
-    image: 'images/jobs/premium/mobil.png'
+    image: 'images/jobs/mobil.png'
   },
   {
     title: 'Bahnsicherheitskraft (m/w/d)',
@@ -374,6 +374,6 @@ module.exports = [
       'Das moderne Arbeitsumfeld in ${city} bietet Ihnen langfristige Entwicklungsmöglichkeiten.',
       'Sorgen Sie in ${city} für Sicherheit und Ordnung in einem abwechslungsreichen Umfeld.'
     ],
-    image: 'images/jobs/premium/bahn.png'
+    image: 'images/jobs/bahn.png'
   }
 ];

@@ -3,3 +3,9 @@ node_modules/
 .netlify/
 brain/
 *.log
+images/jobs/Stellenanzeigenbilder*/
+images/jobs/stellenanzegen bilder/
+cleanup-images.js
+build-jobs.js
+expand-jobs-content.js
+copy-images.js

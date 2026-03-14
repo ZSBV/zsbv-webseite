@@ -918,6 +918,35 @@ a {
   box-shadow: 0 6px 20px rgba(200, 168, 78, 0.3);
 }
 
+.whatsapp-btn-round {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    cursor: pointer;
+    margin: 20px auto 0;
+}
+
+.whatsapp-btn-round:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #128C7E;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn-round svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
 /* ===== SERVICES ===== */
 #services {
   background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
